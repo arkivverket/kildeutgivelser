@@ -10,3 +10,6 @@
 [submodule "digital_edition_search"]
 	path = digital_edition_search
 	url = git@github.com:slsfi/digital_edition_search.git
+[submodule "digital_edition_web_template"]
+	path = digital_edition_web_template
+	url = git@github.com:slsfi/digital_edition_web_template.git
