@@ -1,0 +1,54 @@
+version: '3'
+
+services:
+  pgsql_server:
+    container_name: pgsql_server
+    image: postgres:alpine
+    volumes:
+      - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
+    environment:
+      POSTGRES_USER: web_user
+      POSTGRES_PASSWORD: SecretPassword
+      POSTGRES_DB: digitaleditions
+
+  app:
+    restart: unless-stopped
+    ports:
+      - "2087:80"
+    volumes:
+      - ./digital_edition_web_template/project_files_web/:/project_files_web
+      - ./digital_edition_web_template/project_files_web/config-sample.json:/var/www/config.json
+      - ./digital_edition_web_template/project_files_web/assets/custom_css:/var/www/assets/custom_css
+      - ./digital_edition_web_template/project_files_web/assets/images:/var/www/assets/images
+      - ./digital_edition_web_template/project_files_web/assets/artiklar:/var/www/assets/artiklar
+      - ./digital_edition_web_template/project_files_web/assets/jpeg-files:/var/www/assets/jpeg-files
+    build:
+      context: ./digital_edition_web_template/
+
+  frontend:
+    image: nginx
+    restart: unless-stopped
+    volumes:
+      - ./digital_edition_api/nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    depends_on:
+      - backend
+    ports:
+      - "8000:80"
+
+  backend:
+    build:
+        context: ./digital_edition_api/
+    volumes:
+      # Files for Digital Editions need to be mounted
+      # Syntax is host_path:container_path
+      # This example mounts the host's /var/files/topelius to /var/topelius-files in the container and so on
+      #- /var/files/topelius:/var/topelius-files/
+      #- /var/files/parland:/var/parland-files/
+      #- /var/files/xslt:/var/xslt-files/
+
+      # SSH keys for API to use may be mounted if needed
+      #- /var/www/ssh/deploy_key:/home/uwsgi/.ssh/id_rsa
+
+      # Config files need to be mounted
+      - ./digital_edition_api/sls_api/configs:/app/sls_api/configs
+    restart: unless-stopped
