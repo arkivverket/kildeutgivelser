@@ -1,13 +1,17 @@
 version: '3'
 
+volumes:
+  pgdata:
+
 services:
   pgsql_server:
     container_name: pgsql_server
-    image: postgres:alpine
+    image: postgres:10.11-alpine
     volumes:
       - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
+      - pgdata:/var/lib/postgresql/data
     environment:
-      POSTGRES_USER: web_user
+      POSTGRES_USER: root
       POSTGRES_PASSWORD: SecretPassword
       POSTGRES_DB: digitaleditions
 
