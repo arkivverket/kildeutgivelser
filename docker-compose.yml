@@ -56,3 +56,11 @@ services:
       # Config files need to be mounted
       - ./digital_edition_api/sls_api/configs:/app/sls_api/configs
     restart: unless-stopped
+
+  tools:
+    build:
+      context: ./digital_edition_tools/
+    ports:
+      - 4200:4200
+    volumes:
+      - ./digital_edition_tools/client:/app
