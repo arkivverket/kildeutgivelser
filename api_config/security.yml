@@ -1,0 +1,6 @@
+# The secret key should be unique and secret for each application, as it's used to sign tokens and control API access.
+secret_key: 'edVIOoj$D;N)axN<Bv*eFAmM;'
+
+# This is an SQLAlchemy database URL, into which all user and role information is stored.
+# http://docs.sqlalchemy.org/en/latest/core/engines.html
+user_database: 'sqlite:////users.db'
