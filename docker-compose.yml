@@ -13,7 +13,9 @@ services:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: SecretPassword
-      POSTGRES_DB: digitaleditions
+      POSTGRES_DB: digitaledition
+    ports:
+        - 15432:5432
 
   app:
     restart: unless-stopped
@@ -46,7 +48,7 @@ services:
       # Files for Digital Editions need to be mounted
       # Syntax is host_path:container_path
       # This example mounts the host's /var/files/topelius to /var/topelius-files in the container and so on
-      #- /var/files/topelius:/var/topelius-files/
+      - ./topelius_files:/var/topelius-files/
       #- /var/files/parland:/var/parland-files/
       #- /var/files/xslt:/var/xslt-files/
 
@@ -54,8 +56,11 @@ services:
       #- /var/www/ssh/deploy_key:/home/uwsgi/.ssh/id_rsa
 
       # Config files need to be mounted
-      - ./digital_edition_api/sls_api/configs:/app/sls_api/configs
+      - ./api_config:/app/sls_api/configs
+      - ./db/users.db:/users.db
     restart: unless-stopped
+    environment:
+      - FLASK_DEBUG=1
 
   tools:
     build:
