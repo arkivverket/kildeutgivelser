@@ -10,7 +10,7 @@ topelius:
     git_branch: 'master'
     # And then the actual local directory where the files are located (should be a local git repository with the above configured as its remote)
     file_root: '/var/topelius-files'
-    comments_database: 'mysql://api:22pantsbanana@notes_db:3306/topelius_notes?charset=utf8mb4'
+    comments_database: 'mysql://topelius_notes:SecretPassword@mysql_server:3306/topelius_notes?charset=utf8mb4'
 
 
 # XML-to-HTML is somewhat computationally expensive, so HTML reading texts are cached for up to this amount of time
