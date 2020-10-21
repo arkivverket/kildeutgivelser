@@ -1,16 +1,12 @@
 version: '3'
 
-volumes:
-  pgdata:
-  mydata:
-
 services:
   pgsql_server:
     container_name: pgsql_server
     image: postgres:10.11-alpine
     volumes:
       - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
-      - pgdata:/var/lib/postgresql/data
+      - ./db/pgsql:/var/lib/postgresql/data
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: SecretPassword
@@ -22,7 +18,7 @@ services:
     container_name: mysql_server
     image: mysql:8.0
     volumes:
-      - mydata:/var/lib/mysql
+      - ./db/mysql:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: sahara-he-sune-slops-swishy-umble-cashew
       MYSQL_USER: topelius_notes
