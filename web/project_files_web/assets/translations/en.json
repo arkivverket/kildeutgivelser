@@ -1,0 +1,144 @@
+{
+    "TopMenu" : {
+        "Home" : "Home",
+        "Read" : "Content",
+        "Info" : "About"
+    },
+    "Tabs" : {
+        "Home" : "Home",
+        "Read" : "Read",
+        "Info" : "More Information"
+    },
+    "Read" : {
+        "DigitalEditions" : "Digital Editions",
+        "Popover" : {
+            "Appearance" : "Appearance",
+            "Show" : "Show",
+            "Comments" : "Comments",
+            "PersonInfo" : "People",
+            "Abbreviations" : "Abbreviations",
+            "PageNumbering": "Page Numbering",
+            "PageBreakOriginal": "Original Page Breaks",
+            "PageBreakEdition": "Edition Page Breaks"
+        },
+        "DownloadDigitalVersion" : "Download a Digital Version",
+        "CommentsFor" : "Comments to",
+        "ReadFromBeginning": "From the beginning",
+        "Established": {
+            "Title": "Established text",
+            "AddButtonText": "Established text view"
+        },
+        "Comments": {
+            "Title" : "Comments",
+            "AddButtonText": "Comments view"
+        },
+        "Manuscripts": {
+            "Title": "Manuscript",
+            "AddButtonText": "Manuscript view"
+        },
+        "Variations": {
+            "Title": "Variations",
+            "AddButtonText": "Variation view"
+        },
+        "Facsimiles": {
+            "Title": "Facsimiles",
+            "AddButtonText": "Facsimile view",
+            "SelectFacsimiles": "Choose Facsimile"
+        },
+        "TitlePage": {
+            "Title": "Titel page"
+        },
+        "Introduction": {
+            "Title": ""
+        },
+        "ShowAll": "Show all"
+    },
+    "About" : {
+        "Title" : "About the Edition",
+        "UI" : "User Interface",
+        "Language" : "Language",
+        "Information" : "Information"
+    },
+    "TOC" : {
+        "Home": "Goto start",
+        "Read": "Read",
+        "Facsimiles": "Assorted Facsimile",
+        "ImageGallery": "Image Gallery",
+        "PersonSearch": "Persons",
+        "PlaceSearch": "Places",
+        "TagSearch": "Subjects",
+        "MusicianSearch": "Musicians Search",
+        "WriterSearch": "Writers Search",
+        "SongTypes": "Song Types",
+        "Collections": "Kategorier"
+    },
+    "GalleryPages" : {
+        "0": "Headline 1",
+        "1": "Headline 2",
+        "2": "THeadline 3"
+    },
+    "MobilePages": {
+        "header": "Pages"
+    },
+    "BackButton": {
+        "default": "Go Back"
+    },
+    "HomePage": {
+        "current": "Current",
+        "publishedEditions": "Published Editions:",
+        "digitalEditionHeading": "Många krokar i långdansen",
+        "selectEdition": "View"
+    },
+    "SearchApp":{
+        "simpleSearch": "Simple Search",
+        "advancedSearch": "Advanced Search",
+        "filter": "Filter",
+        "matchesOn": "Match(es):",
+        "pagenumber": "p.",
+        "search-holder": "Seach text",
+        "hitCount": "Hit Count",
+        "type": "Type",
+        "timeline": "Timeline",
+        "freetext": "Freetext",
+        "start": "Start",
+        "end": "End",
+        "relevance": "Relevance",
+        "alphabetical": "Alphabetical",
+        "oldest": "Oldest",
+        "genre": "Genre",
+        "person-register":"Persons",
+        "place-register":"Places ",
+        "tag-register":"Subjects/Tags",
+        "verk":"Works",
+        "sort-by":"Sort by"
+    },
+    "Occurrences":{
+        "Title": "Occurrences",
+        "Manuscript": "Manuscript",
+        "Variation": "Variation",
+        "Commentary": "Commentary",
+        "Facsimile": "Facsimile",
+        "Established": "Established",
+        "longitude": "long.",
+        "latitude": "lat.",
+        "city": "City",
+        "region": "Region",
+        "country": "Place",
+        "place_of_birth": "Place of Birth",
+        "type": "Type",
+        "source": "Source",
+        "description": "Description"
+    },
+    "est": "Established text",
+    "ms": "Manuscript",
+    "com": "Commentary",
+    "tit": "Title",
+    "var": "Variation",
+    "inl": "Introduction",
+    "Reference":{
+        "title": "Refer",
+        "thisPage": "Refer to this page",
+        "established": "Refer to this text",
+        "intro": "Refer to this introduction"
+    }
+}

@@ -1,0 +1,30 @@
+server {
+  listen 80 default_server;
+  listen [::]:80 default_server ipv6only=on;
+
+  root /var/www/;
+  index index.html;
+
+  server_name _;
+
+  location / {
+    try_files $uri $uri/ /index.html =404;
+  }
+
+  location /stats/nginx {
+    stub_status on;
+  }
+
+  location ~* (.*\.xml)$ {
+    types { application/octet-stream .xml; }
+    default_type application/octet-stream;
+  }
+  location ~* (.*\.jpg)$ {
+    types { application/octet-stream .jpg; }
+    default_type application/octet-stream;
+  }
+  location ~* (.*\.mid)$ {
+    types { application/octet-stream .mid; }
+    default_type application/octet-stream;
+  }
+}

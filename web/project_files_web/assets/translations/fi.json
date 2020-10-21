@@ -1,0 +1,58 @@
+{
+    "TopMenu" : {
+        "Home" : "Etusivu",
+        "Read" : "Lue digitaalisesti",
+        "Info" : "Lisää informaatiota"
+    },
+    "Tabs" : {
+        "Home" : "Etusivu",
+        "Read" : "Lue digitaalisesti",
+        "Info" : "Lisää informaatiota"
+    },
+    "Read" : {
+        "DigitalEditions" : "Digitaaliset julkaisut",
+        "Popover" : {
+            "Appearance" : "Ulkonäkö",
+            "Show" : "Näytä",
+            "Comments" : "Kommentit",
+            "PersonInfo" : "Henkilötiedot",
+            "Abbreviations" : "Lyhenteet",
+            "PageNumbering": " Osa/säenumerot"
+        },
+        "DownloadDigitalVersion" : "Lataa digitaalinen versio",
+        "CommentsFor" : "Kommentit",
+        "ReadFromBeginning": "Lue alusta",
+        "Comments": {
+            "Title" : "Kommentit",
+            "AddButtonText": "Kommenttinäkymä"
+        },
+        "Manuscripts": {
+            "Title": "Manuskriptit",
+            "AddButtonText": "Manuskriptinäkymä"
+        },
+        "Variations": {
+            "Title": "Variaatiot",
+            "AddButtonText": "Variaationäkymä"
+        },
+        "Facsimiles": {
+            "Title": "Faksimilet",
+            "AddButtonText": "Faksimiilinäkymä"
+        },
+        "TitlePage": {
+            "Title": "Etusivu"
+        },
+        "Introduction": {
+            "Title": "Esittely"
+        },
+        "ShowAll": "Visa alla"
+    },
+    "About" : {
+        "Title" : "Tietoa digitaalisesta julkaisusta",
+        "UI" : "Käyttöliittymä",
+        "Language" : "Kieli",
+        "Information": "Informaatio"
+    },
+    "TOC" : {
+
+    }
+}

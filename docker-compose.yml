@@ -28,18 +28,18 @@ services:
         - 13306:3306
 
   app:
+    build:
+      context: ./web/
     restart: unless-stopped
     ports:
       - "2087:80"
     volumes:
-      - ./digital_edition_web_template/project_files_web/:/project_files_web
-      - ./digital_edition_web_template/project_files_web/config-sample.json:/var/www/config.json
-      - ./digital_edition_web_template/project_files_web/assets/custom_css:/var/www/assets/custom_css
-      - ./digital_edition_web_template/project_files_web/assets/images:/var/www/assets/images
-      - ./digital_edition_web_template/project_files_web/assets/artiklar:/var/www/assets/artiklar
-      - ./digital_edition_web_template/project_files_web/assets/jpeg-files:/var/www/assets/jpeg-files
-    build:
-      context: ./digital_edition_web_template/
+      - ./web/project_files_web/config.json:/var/www/config.json
+      - ./web/project_files_web/index.html:/var/www/index.html
+      - ./web/project_files_web/assets/custom_css:/var/www/assets/custom_css
+      - ./web/project_files_web/assets/images:/var/www/assets/images
+      - ./web/project_files_web/assets/artiklar:/var/www/assets/artiklar
+      - ./web/project_files_web/assets/jpeg-files:/var/www/assets/jpeg-files
 
   frontend:
     image: nginx
