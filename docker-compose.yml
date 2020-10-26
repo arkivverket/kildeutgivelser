@@ -12,6 +12,8 @@ services:
     volumes:
       - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/db_dump.sql
       - ./db/pgsql:/var/lib/postgresql/data
+    networks:
+      traefik:
     environment:
       POSTGRES_USER: root
       POSTGRES_PASSWORD: SecretPassword
@@ -24,6 +26,8 @@ services:
     image: mysql:8.0
     volumes:
       - ./db/mysql:/var/lib/mysql
+    networks:
+      traefik:
     environment:
       MYSQL_ROOT_PASSWORD: sahara-he-sune-slops-swishy-umble-cashew
       MYSQL_USER: topelius_notes
@@ -38,6 +42,8 @@ services:
     restart: unless-stopped
     ports:
       - "2087:80"
+    networks:
+      traefik:
     volumes:
       - ./web/project_files_web/config.json:/var/www/config.json
       - ./web/project_files_web/index.html:/var/www/index.html
@@ -62,6 +68,8 @@ services:
       - api
     ports:
       - "8000:80"
+    networks:
+      traefik:
     labels:
       - traefik.enable=true
       - traefik.http.routers.api.rule=Host(`kildeutgivelser.bratteng.com`) && PathPrefix(`/api`)
@@ -83,6 +91,8 @@ services:
       - ./api_config:/app/sls_api/configs
       - ./db/users.db:/users.db
     restart: unless-stopped
+    networks:
+      traefik:
     environment:
       - FLASK_DEBUG=1
 
@@ -93,6 +103,8 @@ services:
       - 4200:4200
     volumes:
       - ./digital_edition_tools/client:/app
+    networks:
+      traefik:
     labels:
       - traefik.enable=true
       - traefik.http.routers.tools.rule=Host(`kildeutgivelser.bratteng.com`) && PathPrefix(`/tools`)
