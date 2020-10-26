@@ -1,5 +1,10 @@
 version: '3'
 
+networks:
+  # 172.31.240.0/20
+  traefik:
+    external: true
+
 services:
   pgsql_server:
     container_name: pgsql_server
