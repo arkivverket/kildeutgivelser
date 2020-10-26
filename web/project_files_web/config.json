@@ -1,588 +1,608 @@
 {
-  "app": {
-    "readContent": "...",
-    "machineName" : "topelius",
-    "useLegacyIdsForSemanticData": false,
-    "apiEndpoint": "http://localhost:8000/digitaledition",
-    "showViewToggle": false,
-    "showTopURNButton": false,
-    "showTopMusicButton": true,
-    "page-title": {
-      "sv": "",
-      "fi": "Finlands svenska folkdiktning"
+    "app": {
+        "readContent": "...",
+        "machineName": "topelius",
+        "projectId": 10,
+        "useLegacyIdsForSemanticData": false,
+        "legacyIdPrefix": "",
+        "apiEndpoint": "http://localhost:8000/digitaledition",
+        "page-title": {
+            "sv": "",
+            "fi": "",
+            "en": ""
+        },
+        "name": {
+            "sv": "Zacharias Topelius Skrifter",
+            "fi": "Zacharias Topelius Skrifter",
+            "en": "Zacharias Topelius Skrifter"
+        },
+        "subTitle1": {
+            "sv": "",
+            "fi": ""
+        },
+        "subTitle2": {
+            "sv": "",
+            "fi": ""
+        },
+        "showTopMusicButton": false,
+        "showHelpButton": false,
+        "showViewToggle": true,
+        "CollectionSortOrder": {
+            "199": 10,
+            "200": 15,
+            "201": 13,
+            "202": 9,
+            "203": 7,
+            "204": 19,
+            "205": 16,
+            "206": 12,
+            "207": 5,
+            "208": 4,
+            "209": 23,
+            "210": 3,
+            "211": 14,
+            "212": 22,
+            "213": 8,
+            "214": 6,
+            "215": 17,
+            "216": 1,
+            "217": 18,
+            "219": 20,
+            "220": 21,
+            "221": 11,
+            " 218": 2
+        }
     },
-    "name" : {
-      "sv": "Finlands svenska folkdiktning",
-      "fi": "Finlands svenska folkdiktning"
-    },
-    "subTitle1": {
-        "sv" : "",
-        "fi" : ""
-    },
-    "subTitle2": {
-        "sv" : "",
-        "fi" : ""
-    },
-    "showHelpButton": false
-  },
-  "TutorialSteps": [
-    {
-      "id": "welcome",
-      "intro": "WelcomeText",
-      "show": true,
-      "alreadySeen": false,
-      "hideOn": [],
-      "showOn": []
-    },
-    {
-      "id": "menu",
-      "element": "#menuToggle",
-      "intro": "MenuToggleText",
-      "show": true,
-      "alreadySeen": false,
-      "hideOn": [],
-      "showOn": []
-    },
-    {
-      "id": "downloadCache",
-      "element": "#downloadPerson",
-      "intro": "DownloadCacheText",
-      "show": false,
-      "alreadySeen": false,
-      "hideOn": [],
-      "showOn": ["PersonSearchPage"]
-    }
-  ],
-  "settings": {
-    "readToggles": {
-      "comments": true,
-      "personInfo": true,
-      "abbreviations": true,
-      "pageNumbering": true,
-      "placeNames": true,
-      "changes": true
-    },
-    "displayTypesToggles": {
-      "showAll": true,
-      "established": false,
-      "comment": false,
-      "manuscript": false,
-      "variation": false,
-      "facsimile": true,
-      "song-example": true
-    },
-    "enableModeToggle": true,
-    "getFacsimilePagesInfinite": true
-  },
-  "i18n":{
-    "languages": ["sv"],
-    "locale": "sv",
-    "enableLanguageChanges": false
-  },
-  "simpleSearch": {
-    "showPageNumbers": true,
-    "user_defined_search_fields":["message"],
-    "downloadOccurrencePdf": true,
-    "from_result_to_occurrence": true
-  },
-  "collectionDownloads":{
-    "isDownloadOnly": false,
-    "pdf": [
-      {
-        "pdfFile": "12_3456_sample.pdf",
-        "thumbnail": "12_3456.png",
-        "title": "Sample PDF title",
-        "collectionId": "12",
-        "facsimileId": "789",
-        "publicationId": "3456",
-        "child": false
-      }
+    "showTutorial": true,
+    "TutorialSteps": [
+        {
+            "id": "welcome",
+            "intro": "WelcomeText",
+            "show": true,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "menu",
+            "element": "#menuToggle",
+            "intro": "MenuToggleText",
+            "show": true,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "readtoc",
+            "element": "#readTocItem",
+            "intro": "ReadTocItemText",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "downloadCache",
+            "element": "#downloadPerson",
+            "intro": "DownloadCacheText",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "searchIcon",
+            "element": "#searchIcon",
+            "intro": "Search icon",
+            "show": true,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "linkToPage",
+            "element": "#link-page-button",
+            "intro": "Link page",
+            "show": true,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "settingsIcon",
+            "element": "#settings-icon",
+            "intro": "Settings icon",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "downloadIcon",
+            "element": "#download-icon",
+            "intro": "Download icon",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "readFabMenu",
+            "element": "#readFabMenu",
+            "intro": "Fab menu",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "tabsTextContainer",
+            "element": "#tabs-text-container",
+            "intro": "Tabs text container",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        },
+        {
+            "id": "imageTutorial",
+            "element": "#facsimilies-image",
+            "intro": "Images",
+            "show": false,
+            "alreadySeen": false,
+            "hideOn": [],
+            "showOn": []
+        }
     ],
-    "epub":{
-    }
-  },
-  "editionImages": {
-    "default" : "assets/images/cover_pages/default.png",
-    "41": "assets/images/cover_pages/cover-ia.jpg",
-    "42": "assets/images/cover_pages/cover-ii1.jpg",
-    "43": "assets/images/cover_pages/cover-iii.jpg",
-    "44": "assets/images/cover_pages/cover-iv.jpg",
-    "45": "assets/images/cover_pages/cover-v1.jpg",
-    "46": "assets/images/cover_pages/cover-via2.jpg",
-    "47": "assets/images/cover_pages/cover-vii1.jpg",
-    "48": "assets/images/cover_pages/cover-viii.jpg"
-  },
-  "editionShortTexts": {
-    "sv":{
-      "default" : "Finlands svenska folkdiktning",
-      "41": "Utgiven av Oskar Hackman.\nA. referatsamling.\n1. 1917, 2. 1920\nB. Sagor i urval.\n1. 1917, 2. 1920",
-      "42": "Utgiven av V.E.V. Wessman.\n1. Kulturhistoriska sägner. 1928\n2. Historiska sägner. 1924\n3. Mytiska sägner. 1931",
-      "43": "Utgiven av Väinö Solstrand 1923.",
-      "44": "Utgiven av V.E.V. Wessman. 1949",
-      "45": "Utgiven av Otto Andersson.\n1. Den äldre folkvisan. 1934\n3. Sånglekar. 1967",
-      "46": "Instrumentalmusik. Utgiven av Otto Andersson.\n1. Äldre dansmelodier. 1963\n2. Yngre dansmelodier. 1975.\n3. Bröllopsmusik. 1964\nB. Dansbeskrivningar. Utgiven av Yngvar Heikel. 1938",
-      "47": "1. Övernaturliga väsen. Utgiven av Gunnar Landtman. 1919\n2. Växtlighetsriter. Utgiven av Gunnar Landtman. 1925\n3. Människan och djuren. Utgiven av V.E.V. Wessman. 1952\n4. Folktro om naturen. Utgiven av V.E.V. Wessman. 1955\n5. Magisk folkmedicin. Utgiven av V.W. Forsblom. 1927",
-      "48": "Utgiven av V.E.V. Wessman. 1962"
+    "settings": {
+        "disableReadToggles": false,
+        "readToggles": {
+            "comments": true,
+            "personInfo": true,
+            "placeInfo": true,
+            "changes": true,
+            "workInfo": true,
+            "abbreviations": true,
+            "pageNumbering": true,
+            "pageBreakOriginal": true,
+            "pageBreakEdition": true
+        },
+        "displayTypesToggles": {
+            "showAll": true,
+            "established": true,
+            "comments": true,
+            "manuscripts": true,
+            "variations": true,
+            "facsimiles": true,
+            "introduction": true,
+            "illustrations": true
+        },
+        "toolTips": {
+            "comments": true,
+            "personInfo": true,
+            "placeInfo": true,
+            "changes": true,
+            "variations": true,
+            "abbreviations": true,
+            "workInfo": true,
+            "footNotes": true
+        },
+        "enableModeToggle": true,
+        "getFacsimilePagesInfinite": true,
+        "facsimileDefaultZoomLevel": 3,
+        "galleryCollectionMapping": {
+            "206": 19,
+            "214": 44
+        },
+        "showReadTextIllustrations": [
+            "20212",
+            "20213",
+            "206"
+        ],
+        "sortableLetters": [
+            "220",
+            "219",
+            "215"
+        ]
     },
-    "fi":{
-      "default" : "FI - En undertitel med lite data...",
-      "1": "FI - Tidiga dikter",
-      "15": "FI - Korrespondens med förlag och förläggare",
-      "4": "FI - Tolv noveller, ursprungligen publicerade som följetonger",
-      "5": "FI - Fyra historiska noveller"
-    }
-  },
-  "single-editions": {
-    "sv": {
-        "toc": "Innehåll"
+    "i18n": {
+        "languages": [
+            "sv",
+            "fi"
+        ],
+        "locale": "sv",
+        "enableLanguageChanges": true
     },
-    "fi": {
-        "toc": "Lue digitaalisesti"
-    }
-  },
-  "staticPages": {
-    "frontpage": {
-      "sv": {
-          "name": "Hem",
-          "file": "frontpage-sv"
-      },
-      "fi": {
-          "name": "Koti",
-          "file": "frontpage-fi"
-      }
+    "collectionDownloads": {
+        "isDownloadOnly": false,
+        "pdf": {},
+        "epub": {}
     },
-    "editions": {
-      "sv": {
-          "name": "Läs digitalt",
-          "file": "editions-sv"
-      },
-      "fi": {
-          "name": "Lue digitaalisesti",
-          "file": "editions-fi"
-      }
+    "simpleSearch": {
+        "showPageNumbers": false,
+        "user_defined_search_fields": [
+            "textData"
+        ]
     },
-
-    "about": [
-      {
+    "editionImages": {
+        "199": "assets/images/omslag_1.jpg",
+        "200": "assets/images/omslag_2.jpg",
+        "201": "assets/images/omslag_4.jpg",
+        "202": "assets/images/omslag_5.jpg",
+        "203": "assets/images/omslag_6.jpg",
+        "204": "assets/images/omslag_204.jpg",
+        "205": "assets/images/omslag_8.jpg",
+        "206": "assets/images/omslag_10.jpg",
+        "207": "assets/images/omslag_12.jpg",
+        "208": "assets/images/omslag_13.jpg",
+        "209": "assets/images/omslag_16.jpg",
+        "211": "assets/images/omslag_211.jpg",
+        "213": "assets/images/omslag_20.jpg",
+        "214": "assets/images/omslag_22.jpg",
+        "216": "assets/images/omslag_24.jpg",
+        "218": "assets/images/omslag_29.jpg",
+        "219": "assets/images/omslag_219.jpg",
+        "220": "assets/images/omslag_220.jpg",
+        "default": "assets/images/edition-default-cover.jpg"
+    },
+    "editionShortTexts": {
         "sv": {
-            "name": "Om utgåvan",
-            "file": "about--about-edition-sv"
+            "178": "Fyra historiska noveller",
+            "190": "   ",
+            "199": "Tidiga dikter",
+            "201": "Tolv noveller, ursprungligen publicerade som följetonger",
+            "206": "Läseböcker för folkskolan",
+            "207": "Historiskt-geografiskt bildverk",
+            "208": "Historiskt-geografiskt bildverk",
+            "220": "Korrespondens med förlag och förläggare",
+            "default": "En undertitel med lite data..."
         },
         "fi": {
-            "name": "Testi",
-            "file": "about--about-edition-fi"
+            "175": "FI - Tidiga dikter",
+            "177": "FI - Tolv noveller, ursprungligen publicerade som följetonger",
+            "178": "FI - Fyra historiska noveller",
+            "184": "",
+            "185": "",
+            "197": "FI - Korrespondens med förlag och förläggare",
+            "default": "FI - En undertitel med lite data..."
+        },
+        "en": {
+            "default": "a Subtitle..."
         }
-      },
-      {
+    },
+    "single-editions": {
         "sv": {
-            "name": "Rättelser och tillägg",
-            "file": "about--corrections-and-additions-sv"
+            "toc": "Innehåll"
         },
         "fi": {
-            "name": "Testi",
-            "file": "about--corrections-and-additions-fi"
+            "toc": "Lue digitaalisesti"
         }
-      },
-      {
-        "sv": {
-            "name": "Om mobilversionen",
-            "file": "about--mobile-limitations-sv"
+    },
+    "staticPages": {
+        "about_index": 0,
+        "frontpage": {
+            "sv": {
+                "name": "Hem",
+                "file": "frontpage-sv"
+            },
+            "fi": {
+                "name": "Koti",
+                "file": "frontpage-fi"
+            }
         },
-        "fi": {
-            "name": "Testi",
-            "file": "about--mobile-limitations-fi"
-        }
-      },
-      {
-        "sv": {
-            "name": "Organisation och kontakt",
-            "file": "about--organisation-and-contact-sv"
+        "editions": {
+            "sv": {
+                "name": "Läs digitalt",
+                "file": "editions-sv"
+            },
+            "fi": {
+                "name": "Lue digitaalisesti",
+                "file": "editions-fi"
+            }
         },
-        "fi": {
-            "name": "Testi",
-            "file": "about--organisation-and-contact-fi"
-        }
-      },
-      {
-        "sv": {
-            "name": "Om Topelius",
-            "file": "about--about-author-sv"
+        "about": [
+            {
+                "sv": {
+                    "name": "Om utgåvan",
+                    "file": "about--about-edition-sv"
+                },
+                "fi": {
+                    "name": "Testi",
+                    "file": "about--about-edition-fi"
+                }
+            },
+            {
+                "sv": {
+                    "name": "Rättelser och tillägg",
+                    "file": "about--corrections-and-additions-sv"
+                },
+                "fi": {
+                    "name": "Testi",
+                    "file": "about--corrections-and-additions-fi"
+                }
+            },
+            {
+                "sv": {
+                    "name": "Om mobilversionen",
+                    "file": "about--mobile-limitations-sv"
+                },
+                "fi": {
+                    "name": "Testi",
+                    "file": "about--mobile-limitations-fi"
+                }
+            },
+            {
+                "sv": {
+                    "name": "Organisation och kontakt",
+                    "file": "about--organisation-and-contact-sv"
+                },
+                "fi": {
+                    "name": "Testi",
+                    "file": "about--organisation-and-contact-fi"
+                }
+            },
+            {
+                "sv": {
+                    "name": "Om Topelius",
+                    "file": "about--about-author-sv"
+                },
+                "fi": {
+                    "name": "Testi",
+                    "file": "about--organisation-and-contact-fi"
+                }
+            }
+        ]
+    },
+    "galleryImages": {
+        "0": {
+            "prefix": "FFiT_",
+            "numberOfImages": 120
         },
-        "fi": {
-            "name": "Testi",
-            "file": "about--organisation-and-contact-fi"
+        "1": {
+            "prefix": "ERiF_",
+            "numberOfImages": 39
+        },
+        "2": {
+            "prefix": "foo_",
+            "numberOfImages": 0
         }
-      }
-    ]
-  },
-  "galleryImages": {
-    "0": {
-      "prefix": "FFiT_",
-      "numberOfImages": 120
     },
-    "1": {
-      "prefix": "ERiF_",
-      "numberOfImages": 39
+    "show": {
+        "TOC": {
+            "Home": false,
+            "About": true,
+            "Read": true,
+            "Facsimiles": false,
+            "ImageGallery": false,
+            "PersonSearch": true,
+            "PlaceSearch": true,
+            "MediaCollections": false,
+            "TagSearch": false,
+            "WorkSearch": false,
+            "SongTypes": false,
+            "Books": false
+        }
     },
-    "2": {
-      "prefix": "foo_",
-      "numberOfImages": 0
-    }
-  },
-  "show": {
-    "TOC" : {
-      "Home": true,
-      "Read": true,
-      "Facsimiles": false,
-      "ImageGallery": false,
-      "PersonSearch": true,
-      "PlaceSearch": true,
-      "TagSearch": true,
-      "SongTypes": true
-    }
-  },
-  "defaults": {
-    "ReadModeView": "facsimile"
-  },
-  "cache": {
-    "viewmodes": {
-      "daysUntilExpires": 2
-    }
-  },
-  "PersonSearchTypes": [
-    {
-      "object_type": "subject",
-      "object_subtype": "playman",
-      "translation": "TOC.MusicianSearch",
-      "musicAccordionKey": "musicianSearch"
+    "defaults": {
+        "ReadModeView": [
+            "established",
+            "comments",
+            "facsimiles"
+        ]
     },
-    {
-      "object_type": "subject",
-      "object_subtype": "recorder",
-      "translation": "TOC.WriterSearch",
-      "musicAccordionKey": "writerSearch"
-    }
-  ],
-  "PersonSearch": {
-    "ShowFilter": false
-  },
-  "TagSearch": {
-    "ShowFilter": false
-  },
-  "PlaceSearch": {
-    "ShowFilter": false
-  },
-  "StaticPagesMenus": [
-    {
-      "menuID": "aboutMenu",
-      "idNumber": "03",
-      "hasMenuConditional": false
-    }
-  ],
-  "StaticPagesMenusInTOC": [
-    {
-      "menuID": "aboutMenu",
-      "idNumber": "03",
-      "hasMenuConditional": false
+    "cache": {
+        "viewmodes": {
+            "daysUntilExpires": 2
+        }
     },
-    {
-      "menuID": "songTypesMenu",
-      "idNumber": "04",
-      "menuConditional": "songTypesMenuOpen",
-      "hasRootLevelBackButton": true
-    }
-  ],
-  "GoogleAnalyticsId": "UA-108742418-2",
-  "LoadCollectionsFromAssets": false,
-  "LoadTitleFromDB": false,
-  "StaticMarkdownCovers": true,
-  "ProjectStaticMarkdownCoversFolder": "05",
-  "showOccurencesModalOnReadPageAfterSearch": {
-    "tagSearch": true,
-    "personSearch": true,
-    "placeSearch": true
-  },
-  "SortCollectionsByRomanNumerals": true,
+    "PersonSearchTypes": [
+        {
+            "object_type": "subject",
+            "object_subtype": "",
+            "translation": "TOC.PersonSearch"
+        }
+    ],
+    "PersonSearch": {
+        "ShowFilter": false,
+        "ShowPublishedStatus": 2
+    },
+    "LocationSearch": {
+        "ShowFilter": false,
+        "ShowPublishedStatus": 2
+    },
+    "ImageGallery": {
+        "ShowInReadMenu": false
+    },
+    "TagSearch": {
+        "ShowFilter": false,
+        "ShowPublishedStatus": 2
+    },
+    "Occurrences": {
+        "HideTypeAndDescription": true,
+        "ShowPublishedStatus": 2
+    },
+    "StaticPagesMenus": [
+        {
+            "menuID": "aboutMenu",
+            "idNumber": "03",
+            "hasMenuConditional": false
+        }
+    ],
+    "StaticPagesMenusInTOC": [
+        {
+            "menuID": "aboutMenu",
+            "idNumber": "03",
+            "hasMenuConditional": false
+        }
+    ],
+    "GoogleAnalyticsId": "G-45Hfdfd2KLT2Y",
+    "LoadCollectionsFromAssets": false,
+    "LoadTitleFromDB": true,
+    "StaticMarkdownCovers": false,
+    "ProjectStaticMarkdownCoversFolder": "",
+    "showOccurencesModalOnReadPageAfterSearch": {
+        "tagSearch": true,
+        "personSearch": true,
+        "placeSearch": true,
+        "workSearch": true
+    },
+    "SortCollectionsByRomanNumerals": false,
     "AccordionTOC": true,
-    "AccordionMusic": true,
-    "SearchTocItemInAccordionByTitle": true,
-    "AccordionsExpandedDefault" : {
-      "SongTypes": true,
-      "Music": true,
-      "Collections": false
+    "OpenCollectionFromToc": true,
+    "AccordionMusic": false,
+    "SearchTocItemInAccordionByTitle": false,
+    "AccordionsExpandedDefault": {
+        "SongTypes": false,
+        "Music": false
     },
-    "MusicAccordionShow" : {
-      "PersonSearchTypes": true,
-      "TagSearch": true,
-      "PlaceSearch": true,
-      "PlaymanTraditionPage": true,
-      "Music": true
-    },
-    "SongTypesMenuMarkdown": true,
-    "OpenOccurrencesAndInfoOnNewPage": true,
-    "SongCategories": {
-      "sv": [
-        "avskedsceremonier",
-        "bröllopsdanser",
-        "brudmarscher",
-        "danser på två rader",
-        "diverse danser",
-        "engelska-danser",
-        "fyrkantsdanser",
-        "hamburgska",
-        "långdans",
-        "lyckönskningar",
-        "måltidsmusik",
-        "masurka",
-        "menuett",
-        "pardanser",
-        "polka",
-        "polonäs",
-        "polska",
-        "promenaddanser",
-        "schottisch",
-        "skålar",
-        "tvåtaktsmenuett",
-        "tvåtaktspolska",
-        "vals"
-      ],
-      "fi": []
-    },
-    "CollectionsWithoutTOC": [],
-    "collectionChildrenPdfs": {
-      "41": [
-        {
-          "pdfFile": "41_2211_Sagor_referatsamling_forsta.pdf",
-          "thumbnail": "41_2211.png",
-          "title": "IA. Sagor i urval, Sagor referatsamling första bandet",
-          "collectionId": "41",
-          "facsimileId": "2875",
-          "publicationId": "2211",
-          "child": true
-        },
-        {
-          "pdfFile": "41_2192_I_A_referatsamling_andra_bandet.pdf",
-          "thumbnail": "41_2192.png",
-          "title": "IA. Sagor i urval, Sagor referatsamling andra bandet",
-          "collectionId": "41",
-          "facsimileId": "2854",
-          "publicationId": "2192",
-          "child": true,
-          "useLocal": false
-        },
-        {
-          "pdfFile": "41_2212_I_B_Sagor_i_urval_forsta_bandet.pdf",
-          "thumbnail": "41_2212.png",
-          "title": "IB. Sagor i urval, första bandet",
-          "collectionId": "41",
-          "facsimileId": "2874",
-          "publicationId": "2212",
-          "child": true
-        },
-        {
-          "pdfFile": "41_2193_I_B_sagor_i_urval_andra_bandet.pdf",
-          "thumbnail": "41_2193.png",
-          "title": "IB. Sagor i urval, andra bandet",
-          "collectionId": "41",
-          "facsimileId": "2855",
-          "publicationId": "2193",
-          "child": true
-        }
-      ],
-      "42": [
-        {
-          "pdfFile": "42_2194_II_1_kulturhistoriska_sagner.pdf",
-          "thumbnail": "42_2194.png",
-          "title": "II1. Sägner 1. Kulturhistoriska sägner",
-          "collectionId": "42",
-          "facsimileId": "2859",
-          "publicationId": "2194",
-          "child": true
-        },
-        {
-          "pdfFile": "42_2195_historiska_sagner.pdf",
-          "thumbnail": "42_2195.png",
-          "title": "II2. Sägner 2. Historiska sägner",
-          "collectionId": "42",
-          "facsimileId": "2867",
-          "publicationId": "2195",
-          "child": true
-        },
-        {
-          "pdfFile": "42_2196_II_3_mytiska_sagner_1_forteckning_over_sagentyperna.pdf",
-          "thumbnail": "42_2196.png",
-          "title": "II3.1. Sägner 3. Mytiska sägner 1",
-          "collectionId": "42",
-          "facsimileId": "2856",
-          "publicationId": "2196",
-          "child": true
-        },
-        {
-          "pdfFile": "42_2213_II_3_2_mytiska_sagner_2_sagner_till_typforteckningen.pdf",
-          "thumbnail": "42_2213.png",
-          "title": "II3.2. Sägner 3. Mytiska sägner 2",
-          "collectionId": "42",
-          "facsimileId": "2876",
-          "publicationId": "2213",
-          "child": true
-        }
-      ],
-      "43": [
-        {
-          "pdfFile": "43_2197_III_ordstav.pdf",
-          "thumbnail": "43_2197.png",
-          "title": "III. Ordstäv",
-          "collectionId": "43",
-          "facsimileId": "2860",
-          "publicationId": "2197",
-          "child": true
-        }
-      ],
-      "44": [
-        {
-          "pdfFile": "44_2198_IV_gator.pdf",
-          "thumbnail": "44_2198.png",
-          "title": "IV. Gåtor",
-          "collectionId": "44",
-          "facsimileId": "2861",
-          "publicationId": "2198",
-          "child": true
-        }
-      ],
-      "45": [
-        {
-          "pdfFile": "45_2199_V_1_den_aldre_folkvisan.pdf",
-          "thumbnail": "45_2199.png",
-          "title": "V1. Den äldre folkvisan",
-          "collectionId": "45",
-          "facsimileId": "2862",
-          "publicationId": "2199",
-          "child": true
-        },
-        {
-          "pdfFile": "45_2200_V_3_sanglekar.pdf",
-          "thumbnail": "45_2200.png",
-          "title": "V3. Sånglekar",
-          "collectionId": "45",
-          "facsimileId": "2863",
-          "publicationId": "2200",
-          "child": true
-        }
-      ],
-      "46": [
-        {
-          "pdfFile": "46_2201_vi_a1_aldre_dansmelodier.pdf",
-          "thumbnail": "46_2201.png",
-          "title": "VIA1. Äldre dansmelodier",
-          "collectionId": "46",
-          "facsimileId": "2857",
-          "publicationId": "2201",
-          "child": true
-        },
-        {
-          "pdfFile": "46_2202_VI_A2_yngre_dansmelodier.pdf",
-          "thumbnail": "46_2202.png",
-          "title": "VIA2. Yngre dansmelodier",
-          "collectionId": "46",
-          "facsimileId": "2866",
-          "publicationId": "2202",
-          "child": true
-        },
-        {
-          "pdfFile": "46_2203_VI_A3_brollopsmusik.pdf",
-          "thumbnail": "46_2203.png",
-          "title": "VIA3. Bröllopsmusik",
-          "collectionId": "46",
-          "facsimileId": "2864",
-          "publicationId": "2203",
-          "child": true
-        },
-        {
-          "pdfFile": "46_2215_VI_folkdans_b_dansbeskrivninga.pdf",
-          "thumbnail": "46_2215.png",
-          "title": "VIb. Folkdans dansbeskrivningar",
-          "collectionId": "46",
-          "facsimileId": "2878",
-          "publicationId": "2215",
-          "child": true
-        }
-      ],
-      "47": [
-        {
-          "pdfFile": "47_2205_VII_1_overnaturliga_vasen.pdf",
-          "thumbnail": "47_2205.png",
-          "title": "VII 1. Övernaturliga väsen",
-          "collectionId": "47",
-          "facsimileId": "2869",
-          "publicationId": "2205",
-          "child": true
-        },
-        {
-          "pdfFile": "47_2206_VII_2_vaxtlighetsriter.pdf",
-          "thumbnail": "47_2206.png",
-          "title": "VII 2. Växtlighetsriter",
-          "collectionId": "47",
-          "facsimileId": "2868",
-          "publicationId": "2206",
-          "child": true
-        },
-        {
-          "pdfFile": "47_2207_VII_3_manniskan_och_djuren.pdf",
-          "thumbnail": "47_2207.png",
-          "title": "VII 3. Människan och djuren",
-          "collectionId": "47",
-          "facsimileId": "2870",
-          "publicationId": "2207",
-          "child": true
-        },
-        {
-          "pdfFile": "47_2208_VII_4_folktro_om_naturen.pdf",
-          "thumbnail": "47_2208.png",
-          "title": "VII 4. Folktro om naturen",
-          "collectionId": "47",
-          "facsimileId": "2871",
-          "publicationId": "2208",
-          "child": true
-        },
-        {
-          "pdfFile": "47_2209_VII_5_magisk_folkmedicin.pdf",
-          "thumbnail": "47_2209.png",
-          "title": "VII 5. Magisk folkmedicin",
-          "collectionId": "47",
-          "facsimileId": "2872",
-          "publicationId": "2209",
-          "child": true
-        },
-        {
-          "pdfFile": "47_2216_VII_5_magisk_folkmedicin_register.pdf",
-          "thumbnail": "47_2216.png",
-          "title": "VII 5. Magisk folkmedicin register",
-          "collectionId": "47",
-          "facsimileId": "2879",
-          "publicationId": "2216",
-          "child": true
-        }
-      ],
-      "48": [
-        {
-          "pdfFile": "48_2210_VIII_lekar_och_spel.pdf",
-          "thumbnail": "48_2210.png",
-          "title": "VIII Lekar och spel",
-          "collectionId": "48",
-          "facsimileId": "2873",
-          "publicationId": "2210",
-          "child": true
-        }
-      ]
-    },
-    "SingleOccurrenceType": "song",
-    "HasIntro": false,
-    "SidemenuMobile": true,
-    "HideBackButton": {
-      "TopMenu": true
+    "MusicAccordion": {
+        "PersonSearchTypes": false,
+        "TagSearch": false,
+        "PlaceSearch": false,
+        "Music": false
     },
     "AboutMenuAccordion": true,
+    "HasCover": true,
+    "HasIntro": true,
+    "SidemenuMobile": true,
+    "OpenOccurrencesAndInfoOnNewPage": false,
+    "SingleOccurrenceType": null,
+    "HideBackButton": {
+        "TopMenu": true
+    },
     "MusicPage": {
-      "collectionsToShow": [45, 46]
+        "collectionsToShow": []
+    },
+    "separeateIntroductionToc": true,
+    "ElasticSearch": {
+        "groupOpenByDefault": {
+            "type": true,
+            "genre": true,
+            "collection": true
+        },
+        "indices": [
+            "topelius"
+        ],
+        "fixedFilters": [
+            {
+                "terms": {
+                    "publication_data.published": [
+                        2
+                    ]
+                }
+            }
+        ],
+        "types": [
+            "est",
+            "com",
+            "var",
+            "inl",
+            "tit",
+            "ms"
+        ],
+        "hitsPerPage": 20,
+        "source": [
+            "xml_type",
+            "TitleIndexed",
+            "publication_data",
+            "publication_locations",
+            "publication_subjects",
+            "publication_tags",
+            "publication_id",
+            "path",
+            "name",
+            "collection_name",
+            "orig_date_year_uncertain",
+            "orig_date_certain",
+            "receiver_subject_name",
+            "sender_subject_name",
+            "receiver_location_name",
+            "sender_location_name"
+        ],
+        "aggregations": {
+            "Years": {
+                "date_histogram": {
+                    "field": "orig_date_certain",
+                    "calendar_interval": "year",
+                    "format": "yyyy"
+                }
+            },
+            "Type": {
+                "terms": {
+                    "field": "xml_type.keyword",
+                    "size": 40
+                }
+            },
+            "Genre": {
+                "terms": {
+                    "field": "publication_data.genre.keyword",
+                    "size": 40
+                }
+            },
+            "Collection": {
+                "terms": {
+                    "field": "publication_data.colname.keyword",
+                    "size": 40
+                }
+            },
+            "Location": {
+                "terms": {
+                    "field": "publication_locations.name.keyword",
+                    "size": 40
+                }
+            },
+            "Subjects": {
+                "terms": {
+                    "field": "publication_subjects.full_name.keyword",
+                    "size": 40
+                }
+            },
+            "Tags": {
+                "terms": {
+                    "field": "publication_tags.keyword",
+                    "size": 40
+                }
+            },
+            "Person": {
+                "terms": {
+                    "field": "publication_subjects.full_name.keyword",
+                    "size": 40
+                }
+            },
+            "LetterSenderName": {
+                "terms": {
+                    "field": "sender_subject_name.keyword",
+                    "size": 40
+                }
+            },
+            "LetterReceiverName": {
+                "terms": {
+                    "field": "receiver_subject_name.keyword",
+                    "size": 40
+                }
+            },
+            "LetterSenderLocation": {
+                "terms": {
+                    "field": "sender_location_name.keyword",
+                    "size": 40
+                }
+            },
+            "LetterReceiverLocation": {
+                "terms": {
+                    "field": "receiver_location_name.keyword",
+                    "size": 40
+                }
+            }
+        },
+        "suggestions": {
+            "LetterSenderName": {
+                "field": "sender_subject_name",
+                "size": 3
+            },
+            "LetterSenderLocation": {
+                "field": "sender_location_name",
+                "size": 3
+            }
+        }
     }
 }
