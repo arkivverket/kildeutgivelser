@@ -55,7 +55,6 @@ services:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
       - traefik.http.routers.app.entrypoints=https
-      - traefik.http.routers.app.middlewares=secureHeaders@file
       - traefik.http.routers.app.tls=true
       - traefik.http.routers.app.tls.certresolver=letsencrypt
 
@@ -74,7 +73,6 @@ services:
       - traefik.enable=true
       - traefik.http.routers.api.rule=Host(`api.kildeutgivelser.bratteng.com`)
       - traefik.http.routers.api.entrypoints=https
-      - traefik.http.routers.api.middlewares=secureHeaders@file
       - traefik.http.routers.api.tls=true
       - traefik.http.routers.api.tls.certresolver=letsencrypt
 
@@ -109,6 +107,5 @@ services:
       - traefik.enable=true
       - traefik.http.routers.tools.rule=Host(`kildeutgivelser.bratteng.com`) && PathPrefix(`/tools`)
       - traefik.http.routers.tools.entrypoints=https
-      - traefik.http.routers.tools.middlewares=secureHeaders@file
       - traefik.http.routers.tools.tls=true
       - traefik.http.routers.tools.tls.certresolver=letsencrypt
