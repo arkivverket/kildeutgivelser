@@ -105,7 +105,7 @@ services:
       traefik:
     labels:
       - traefik.enable=true
-      - traefik.http.routers.tools.rule=Host(`kildeutgivelser.bratteng.com`) && PathPrefix(`/tools`)
+      - traefik.http.routers.tools.rule=Host(`tools.kildeutgivelser.bratteng.com`)
       - traefik.http.routers.tools.entrypoints=https
       - traefik.http.routers.tools.tls=true
       - traefik.http.routers.tools.tls.certresolver=letsencrypt
