@@ -5,7 +5,7 @@
         "projectId": 10,
         "useLegacyIdsForSemanticData": false,
         "legacyIdPrefix": "",
-        "apiEndpoint": "http://localhost:8000/digitaledition",
+        "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
         "page-title": {
             "sv": "",
             "fi": "",
