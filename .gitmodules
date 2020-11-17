@@ -10,9 +10,6 @@
 [submodule "digital_edition_search"]
 	path = digital_edition_search
 	url = git@github.com:slsfi/digital_edition_search.git
-[submodule "digital_edition_tools"]
-	path = digital_edition_tools
-	url = git@github.com:slsfi/digital_edition_tools.git
 [submodule "digital_edition_commentary"]
 	path = digital_edition_commentary
 	url = git@github.com:slsfi/digital_edition_commentary.git
