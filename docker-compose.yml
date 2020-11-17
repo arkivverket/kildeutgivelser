@@ -96,11 +96,9 @@ services:
 
   tei_tools:
     build:
-      context: ./digital_edition_tools/
+      context: ./tei_tools/
     ports:
       - 4200:4200
-    volumes:
-      - ./digital_edition_tools/client:/app
     networks:
       traefik:
     labels:
