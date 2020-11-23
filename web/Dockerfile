@@ -1,6 +1,6 @@
 FROM nginx:alpine
 
-COPY --from=slsfinland/digital_edition_web:beta-1.1.58 /digital_edition_web/platforms/browser/www/ /var/www/
+COPY --from=slsfinland/digital_edition_web:beta-1.1.66 /digital_edition_web/platforms/browser/www/ /var/www/
 
 WORKDIR /var/www
 
