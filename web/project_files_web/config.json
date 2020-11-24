@@ -196,7 +196,6 @@
         ]
     },
     "editionImages": {
-        "1": "assets/images/omslag_1.jpg",
         "default": "assets/images/edition-default-cover.jpg"
     },
     "editionShortTexts": {
