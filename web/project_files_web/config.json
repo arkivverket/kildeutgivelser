@@ -7,22 +7,16 @@
         "legacyIdPrefix": "",
         "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
         "page-title": {
-            "sv": "",
-            "fi": "",
-            "en": ""
+            "sv": ""
         },
         "name": {
-            "sv": "Zacharias Topelius Skrifter",
-            "fi": "Zacharias Topelius Skrifter",
-            "en": "Zacharias Topelius Skrifter"
+            "sv": "Zacharias Topelius Skrifter"
         },
         "subTitle1": {
-            "sv": "",
-            "fi": ""
+            "sv": ""
         },
         "subTitle2": {
-            "sv": "",
-            "fi": ""
+            "sv": ""
         },
         "showTopMusicButton": false,
         "showHelpButton": false,
@@ -207,8 +201,7 @@
     },
     "i18n": {
         "languages": [
-            "sv",
-            "fi"
+            "sv"
         ],
         "locale": "sv",
         "enableLanguageChanges": true
@@ -256,26 +249,11 @@
             "208": "Historiskt-geografiskt bildverk",
             "220": "Korrespondens med förlag och förläggare",
             "default": "En undertitel med lite data..."
-        },
-        "fi": {
-            "175": "FI - Tidiga dikter",
-            "177": "FI - Tolv noveller, ursprungligen publicerade som följetonger",
-            "178": "FI - Fyra historiska noveller",
-            "184": "",
-            "185": "",
-            "197": "FI - Korrespondens med förlag och förläggare",
-            "default": "FI - En undertitel med lite data..."
-        },
-        "en": {
-            "default": "a Subtitle..."
         }
     },
     "single-editions": {
         "sv": {
             "toc": "Innehåll"
-        },
-        "fi": {
-            "toc": "Lue digitaalisesti"
         }
     },
     "staticPages": {
@@ -284,20 +262,12 @@
             "sv": {
                 "name": "Hem",
                 "file": "frontpage-sv"
-            },
-            "fi": {
-                "name": "Koti",
-                "file": "frontpage-fi"
             }
         },
         "editions": {
             "sv": {
                 "name": "Läs digitalt",
                 "file": "editions-sv"
-            },
-            "fi": {
-                "name": "Lue digitaalisesti",
-                "file": "editions-fi"
             }
         },
         "about": [
@@ -305,50 +275,30 @@
                 "sv": {
                     "name": "Om utgåvan",
                     "file": "about--about-edition-sv"
-                },
-                "fi": {
-                    "name": "Testi",
-                    "file": "about--about-edition-fi"
                 }
             },
             {
                 "sv": {
                     "name": "Rättelser och tillägg",
                     "file": "about--corrections-and-additions-sv"
-                },
-                "fi": {
-                    "name": "Testi",
-                    "file": "about--corrections-and-additions-fi"
                 }
             },
             {
                 "sv": {
                     "name": "Om mobilversionen",
                     "file": "about--mobile-limitations-sv"
-                },
-                "fi": {
-                    "name": "Testi",
-                    "file": "about--mobile-limitations-fi"
                 }
             },
             {
                 "sv": {
                     "name": "Organisation och kontakt",
                     "file": "about--organisation-and-contact-sv"
-                },
-                "fi": {
-                    "name": "Testi",
-                    "file": "about--organisation-and-contact-fi"
                 }
             },
             {
                 "sv": {
                     "name": "Om Topelius",
                     "file": "about--about-author-sv"
-                },
-                "fi": {
-                    "name": "Testi",
-                    "file": "about--organisation-and-contact-fi"
                 }
             }
         ]
