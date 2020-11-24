@@ -10,7 +10,7 @@
             "sv": ""
         },
         "name": {
-            "sv": "Zacharias Topelius Skrifter"
+            "sv": "Stattholder Løvenskiolds rapporter til kong Oscar I"
         },
         "subTitle1": {
             "sv": ""
@@ -22,32 +22,10 @@
         "showHelpButton": false,
         "showViewToggle": true,
         "CollectionSortOrder": {
-            "199": 10,
-            "200": 15,
-            "201": 13,
-            "202": 9,
-            "203": 7,
-            "204": 19,
-            "205": 16,
-            "206": 12,
-            "207": 5,
-            "208": 4,
-            "209": 23,
-            "210": 3,
-            "211": 14,
-            "212": 22,
-            "213": 8,
-            "214": 6,
-            "215": 17,
-            "216": 1,
-            "217": 18,
-            "219": 20,
-            "220": 21,
-            "221": 11,
-            " 218": 2
+            "1": 1
         }
     },
-    "showTutorial": true,
+    "showTutorial": false,
     "TutorialSteps": [
         {
             "id": "welcome",
@@ -218,36 +196,11 @@
         ]
     },
     "editionImages": {
-        "199": "assets/images/omslag_1.jpg",
-        "200": "assets/images/omslag_2.jpg",
-        "201": "assets/images/omslag_4.jpg",
-        "202": "assets/images/omslag_5.jpg",
-        "203": "assets/images/omslag_6.jpg",
-        "204": "assets/images/omslag_204.jpg",
-        "205": "assets/images/omslag_8.jpg",
-        "206": "assets/images/omslag_10.jpg",
-        "207": "assets/images/omslag_12.jpg",
-        "208": "assets/images/omslag_13.jpg",
-        "209": "assets/images/omslag_16.jpg",
-        "211": "assets/images/omslag_211.jpg",
-        "213": "assets/images/omslag_20.jpg",
-        "214": "assets/images/omslag_22.jpg",
-        "216": "assets/images/omslag_24.jpg",
-        "218": "assets/images/omslag_29.jpg",
-        "219": "assets/images/omslag_219.jpg",
-        "220": "assets/images/omslag_220.jpg",
+        "1": "assets/images/omslag_1.jpg",
         "default": "assets/images/edition-default-cover.jpg"
     },
     "editionShortTexts": {
         "sv": {
-            "178": "Fyra historiska noveller",
-            "190": "   ",
-            "199": "Tidiga dikter",
-            "201": "Tolv noveller, ursprungligen publicerade som följetonger",
-            "206": "Läseböcker för folkskolan",
-            "207": "Historiskt-geografiskt bildverk",
-            "208": "Historiskt-geografiskt bildverk",
-            "220": "Korrespondens med förlag och förläggare",
             "default": "En undertitel med lite data..."
         }
     },
@@ -324,8 +277,8 @@
             "Read": true,
             "Facsimiles": false,
             "ImageGallery": false,
-            "PersonSearch": true,
-            "PlaceSearch": true,
+            "PersonSearch": false,
+            "PlaceSearch": false,
             "MediaCollections": false,
             "TagSearch": false,
             "WorkSearch": false,
