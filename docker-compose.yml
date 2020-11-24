@@ -57,6 +57,7 @@ services:
       - traefik.http.routers.app.entrypoints=https
       - traefik.http.routers.app.tls=true
       - traefik.http.routers.app.tls.certresolver=letsencrypt
+      - traefik.http.routers.api.middlewares=cors@docker
 
   api_proxy:
     image: nginx
@@ -75,6 +76,11 @@ services:
       - traefik.http.routers.api.entrypoints=https
       - traefik.http.routers.api.tls=true
       - traefik.http.routers.api.tls.certresolver=letsencrypt
+      - traefik.http.routers.api.middlewares=cors@docker
+      - traefik.http.middlewares.cors.headers.accesscontrolallowmethods=GET,POST,PATCH,OPTIONS
+      - traefik.http.middlewares.cors.headers.accessControlAllowOriginList=*
+      - traefik.http.middlewares.cors.headers.accessControlAllowHeaders=Content-Type
+      - traefik.http.middlewares.cors.headers.accessControlMaxAge=60
 
   api:
     build:
@@ -108,3 +114,4 @@ services:
       - traefik.http.routers.tools.entrypoints=https
       - traefik.http.routers.tools.tls=true
       - traefik.http.routers.tools.tls.certresolver=letsencrypt
+      - traefik.http.routers.api.middlewares=cors@docker
