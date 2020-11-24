@@ -26,7 +26,7 @@ read-text .collections{
 
 .tei h2{
     padding-top: 1em;
-    font-size: 1em !important; 
+    font-size: 1em !important;
 }
 
 .tei.place_name,.onki_province,.collection{
@@ -126,7 +126,7 @@ page-music .scroll-content{
 page-music .banner{
     @media only screen and (min-device-width : 640px) {
         background-size: contain;
-    }		
+    }
 }
 
 page-content .content >.fixed-content{
@@ -144,15 +144,15 @@ home-page .content >.fixed-content{
 }
 
 .toolbar-background{
-    background-color: rgb(227,175,60) !important;
+    background-color: #000000 !important;
 }
 
 .mobile_row {
-    background-color: rgb(227,175,60) !important;
+    background-color: #000000 !important;
 }
 
 .mobile_row > button{
-    background-color: rgb(227,175,60) !important;
+    background-color: #000000 !important;
     box-shadow: none !important;
 }
 
@@ -163,4 +163,3 @@ home-page .content >.fixed-content{
 title-logo > div > a {
     float: right !important;
 }
-  
