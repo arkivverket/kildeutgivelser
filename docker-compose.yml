@@ -41,7 +41,7 @@ services:
       context: ./web/
     restart: unless-stopped
     ports:
-      - "2087:80"
+      - "2087:8080"
     networks:
       traefik:
     volumes:
