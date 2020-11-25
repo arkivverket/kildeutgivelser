@@ -80,7 +80,8 @@
     },
     "i18n": {
         "languages": [
-            "sv"
+			"sv",
+			"no"
         ],
         "locale": "sv",
         "enableLanguageChanges": true
@@ -102,11 +103,17 @@
     "editionShortTexts": {
         "sv": {
             "default": "En undertitel med lite data..."
-        }
+		},
+		"no": {
+			"default": "En undertittel med lite data..."
+		}
     },
     "single-editions": {
         "sv": {
             "toc": "Innehåll"
+        },
+        "no": {
+            "toc": "Innhold"
         }
     },
     "staticPages": {
@@ -115,11 +122,19 @@
             "sv": {
                 "name": "Hem",
                 "file": "frontpage-sv"
+            },
+            "no": {
+                "name": "Hjem",
+                "file": "frontpage-sv"
             }
         },
         "editions": {
             "sv": {
                 "name": "Läs digitalt",
+                "file": "editions-sv"
+            },
+            "no": {
+                "name": "Les digitalt",
                 "file": "editions-sv"
             }
         },
