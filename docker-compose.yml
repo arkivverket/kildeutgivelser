@@ -5,6 +5,9 @@ networks:
   traefik:
     external: true
 
+volumes:
+  tmp:
+
 services:
   pgsql_server:
     container_name: pgsql_server
@@ -45,6 +48,7 @@ services:
     networks:
       traefik:
     volumes:
+      - tmp:/tmp
       - ./web/public/config.json:/var/www/html/public/config.json
       - ./web/public/index.html:/var/www/html/public/index.html
       - ./web/public/assets/custom_css:/var/www/html/public/assets/custom_css
