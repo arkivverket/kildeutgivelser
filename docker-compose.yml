@@ -45,12 +45,12 @@ services:
     networks:
       traefik:
     volumes:
-      - ./web/project_files_web/config.json:/var/www/config.json
-      - ./web/project_files_web/index.html:/var/www/index.html
-      - ./web/project_files_web/assets/custom_css:/var/www/assets/custom_css
-      - ./web/project_files_web/assets/images:/var/www/assets/images
-      - ./web/project_files_web/assets/artiklar:/var/www/assets/artiklar
-      - ./web/project_files_web/assets/jpeg-files:/var/www/assets/jpeg-files
+      - ./web/public/config.json:/var/www/html/public/config.json
+      - ./web/public/index.html:/var/www/html/public/index.html
+      - ./web/public/assets/custom_css:/var/www/html/public/assets/custom_css
+      - ./web/public/assets/images:/var/www/html/public/assets/images
+      - ./web/public/assets/artiklar:/var/www/html/public/assets/artiklar
+      - ./web/public/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
