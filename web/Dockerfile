@@ -10,7 +10,5 @@ COPY project_files_web/assets/i18n assets/i18n
 COPY project_files_web/assets/jpeg-files assets/jpeg-files
 
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD gzip.conf /etc/nginx/conf.d/gzip.conf
-ADD nginx.default /etc/nginx/conf.d/default.conf
 
 # ENTRYPOINT nginx
