@@ -7,19 +7,15 @@
         "legacyIdPrefix": "",
         "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
         "page-title": {
-			"sv": "",
 			"no": ""
         },
         "name": {
-            "sv": "Stattholder Løvenskiolds rapporter til kong Oscar I",
             "no": "Stattholder Løvenskiolds rapporter til kong Oscar I"
         },
         "subTitle1": {
-            "sv": "",
             "no": ""
         },
         "subTitle2": {
-            "sv": "",
             "no": ""
         },
         "showTopMusicButton": false,
@@ -84,11 +80,10 @@
     },
     "i18n": {
         "languages": [
-			"sv",
 			"no"
         ],
         "locale": "no",
-        "enableLanguageChanges": true
+        "enableLanguageChanges": false
     },
     "collectionDownloads": {
         "isDownloadOnly": false,
@@ -105,17 +100,11 @@
         "default": "assets/images/edition-default-cover.jpg"
     },
     "editionShortTexts": {
-        "sv": {
-            "default": "En undertitel med lite data..."
-		},
 		"no": {
 			"default": "En undertittel med lite data..."
 		}
     },
     "single-editions": {
-        "sv": {
-            "toc": "Innehåll"
-        },
         "no": {
             "toc": "Innhold"
         }
@@ -123,31 +112,19 @@
     "staticPages": {
         "about_index": 0,
         "frontpage": {
-            "sv": {
-                "name": "Hem",
-                "file": "frontpage-sv"
-            },
             "no": {
                 "name": "Hjem",
-                "file": "frontpage-sv"
+                "file": "frontpage-no"
             }
         },
         "editions": {
-            "sv": {
-                "name": "Läs digitalt",
-                "file": "editions-sv"
-            },
             "no": {
                 "name": "Les digitalt",
-                "file": "editions-sv"
+                "file": "editions-no"
             }
         },
         "about": [
             {
-                "sv": {
-                    "name": "Om utgåvan",
-                    "file": "about--about-edition-sv"
-                },
                 "no": {
                     "name": "Om utgaven",
                     "file": "about--about-edition-no"
