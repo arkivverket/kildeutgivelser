@@ -2,7 +2,7 @@
     "app": {
         "readContent": "...",
         "machineName": "topelius",
-        "projectId": 10,
+        "projectId": 1,
         "useLegacyIdsForSemanticData": false,
         "legacyIdPrefix": "",
         "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
