@@ -1,3 +1,5 @@
 [user]
 	email = tei_tools@kildeutgivelser.bratteng.com
 	name = TEI Tools
+[core]
+	quotepath = off
