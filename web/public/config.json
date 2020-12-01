@@ -147,30 +147,10 @@
                 "sv": {
                     "name": "Om utgåvan",
                     "file": "about--about-edition-sv"
-                }
-            },
-            {
-                "sv": {
-                    "name": "Rättelser och tillägg",
-                    "file": "about--corrections-and-additions-sv"
-                }
-            },
-            {
-                "sv": {
-                    "name": "Om mobilversionen",
-                    "file": "about--mobile-limitations-sv"
-                }
-            },
-            {
-                "sv": {
-                    "name": "Organisation och kontakt",
-                    "file": "about--organisation-and-contact-sv"
-                }
-            },
-            {
-                "sv": {
-                    "name": "Om Topelius",
-                    "file": "about--about-author-sv"
+                },
+                "no": {
+                    "name": "Om utgaven",
+                    "file": "about--about-edition-no"
                 }
             }
         ]
