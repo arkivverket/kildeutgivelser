@@ -7,17 +7,20 @@
         "legacyIdPrefix": "",
         "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
         "page-title": {
-            "sv": ""
+			"sv": "",
+			"no": ""
         },
         "name": {
             "sv": "Stattholder Løvenskiolds rapporter til kong Oscar I",
             "no": "Stattholder Løvenskiolds rapporter til kong Oscar I"
         },
         "subTitle1": {
-            "sv": ""
+            "sv": "",
+            "no": ""
         },
         "subTitle2": {
-            "sv": ""
+            "sv": "",
+            "no": ""
         },
         "showTopMusicButton": false,
         "showHelpButton": false,
