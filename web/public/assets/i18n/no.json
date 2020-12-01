@@ -1,11 +1,11 @@
 {
     "BrowserWarning": "Din webbläsare stöds inte",
     "BrowserWarningInfo": "Internet Explorer stöds inte av denna sida. Använd Edge, Firefox eller nån annan webbläsare.",
-    "BrowserWarningClose": "Stäng",
+    "BrowserWarningClose": "Lukk",
     "TutorialTexts": {
-        "nextLabel": "Nästa",
-        "prevLabel": "Föregående",
-        "skipLabel": "Hoppa över",
+        "nextLabel": "Neste",
+        "prevLabel": "Forrige",
+        "skipLabel": "Hopp over",
         "doneLabel": "Klar",
         "WelcomeText": "Välkommen, här följer en presentation av användargränssnittet.",
         "MenuToggleText": "Klicka här för att dölja eller visa sidomenyn.",
@@ -13,9 +13,9 @@
         "DownloadCacheText": "Med denna knapp kan du spara datan lokalt, så går det snabbare nästa gång."
     },
     "TopMenu": {
-        "Home": "Startsida",
-        "Read": "Läs",
-        "Info": "Utgåvan",
+        "Home": "Forside",
+        "Read": "Les",
+        "Info": "Utgave",
         "Music": "Musik"
     },
     "Tabs": {
@@ -86,15 +86,15 @@
         "ShowSearchResults": "Förekomster"
     },
     "About": {
-        "Title": "Finlands svenska folkdiktning",
-        "UI": "Användargränssnitt",
+        "Title": "Arkivverket kildeutgivelser",
+        "UI": "Brukergrensesnitt",
         "Language": "Språk",
-        "Information": "Information"
+        "Information": "Informasjon"
     },
     "TOC": {
-        "Home": "Till startsidan",
-        "About": "Finlands svenska folkdiktning",
-        "Read": "Läs",
+        "Home": "Til forsiden",
+        "About": "Arkivverket kildeutgivelser",
+        "Read": "Les",
         "Facsimiles": "Faksimil i urval",
         "ImageGallery": "Bildgalleri",
         "PersonSearch": "Personsök",
