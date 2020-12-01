@@ -7,16 +7,16 @@
         "legacyIdPrefix": "",
         "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
         "page-title": {
-			"no": ""
+			"no": "page-title"
         },
         "name": {
             "no": "Stattholder Løvenskiolds rapporter til kong Oscar I"
         },
         "subTitle1": {
-            "no": ""
+            "no": "subTitle1"
         },
         "subTitle2": {
-            "no": ""
+            "no": "subTitle2"
         },
         "showTopMusicButton": false,
         "showHelpButton": false,
@@ -63,20 +63,9 @@
         "enableModeToggle": true,
         "getFacsimilePagesInfinite": true,
         "facsimileDefaultZoomLevel": 3,
-        "galleryCollectionMapping": {
-            "206": 19,
-            "214": 44
-        },
-        "showReadTextIllustrations": [
-            "20212",
-            "20213",
-            "206"
-        ],
-        "sortableLetters": [
-            "220",
-            "219",
-            "215"
-        ]
+        "galleryCollectionMapping": {},
+        "showReadTextIllustrations": [],
+        "sortableLetters": []
     },
     "i18n": {
         "languages": [
