@@ -1,6 +1,6 @@
 FROM ghcr.io/bratteng/nginx:mainline
 
-COPY --from=slsfinland/digital_edition_web:beta-1.1.66 /digital_edition_web/platforms/browser/www/ /var/www/html/public
+COPY --from=slsfinland/digital_edition_web:2.0 /digital_edition_web/platforms/browser/www/ /var/www/html/public
 
 WORKDIR /var/www/html/public
 
