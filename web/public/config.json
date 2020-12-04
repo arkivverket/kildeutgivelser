@@ -1,5 +1,6 @@
 {
     "app": {
+        "siteLogoURL": "https://arkivverket.no",
         "readContent": "...",
         "machineName": "topelius",
         "projectId": 1,
