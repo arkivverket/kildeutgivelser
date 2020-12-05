@@ -25,24 +25,10 @@ services:
     ports:
         - 15432:5432
 
-  mysql_server:
-    container_name: mysql_server
-    image: mysql:8.0
-    volumes:
-      - ./db/mysql:/var/lib/mysql
-    networks:
-      traefik:
-    environment:
-      MYSQL_ROOT_PASSWORD: sahara-he-sune-slops-swishy-umble-cashew
-      MYSQL_USER: topelius_notes
-      MYSQL_PASSWORD: SecretPassword
-      MYSQL_DATABASE: topelius_notes
-    ports:
-        - 13306:3306
-
   app:
     build:
-      context: ./web/
+      context: .
+      dockerfile: Dockerfile.web
     restart: unless-stopped
     ports:
       - "2087:8080"
