@@ -1,23 +1,12 @@
 engine: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@pgsql_server:5432/${POSTGRES_DB}'
 
 # Each digital edition project has its own config section describing how its files are located and handled
-topelius:
-# First, settings about how the publication tools should communicate towards git
-    show_internally_published: False
-    show_unpublished: False
-    disabled_publications: []
-    git_repository: 'https://github.com/slsfi/digital_edition_required_files_template.git'
-    git_branch: 'master'
-    # And then the actual local directory where the files are located (should be a local git repository with the above configured as its remote)
-    file_root: '/var/topelius-files'
-    comments_database: 'mysql://topelius_notes:SecretPassword@mysql_server:3306/topelius_notes?charset=utf8mb4'
 
 stattholder:
-# First, settings about how the publication tools should communicate towards git
     show_internally_published: False
     show_unpublished: False
     disabled_publications: []
-    git_repository: 'https://github.com/slsfi/digital_edition_required_files_template.git'
+    git_repository: 'https://github.com/omBratteng/digital_edition_required_files_template.git'
     git_branch: 'master'
     # And then the actual local directory where the files are located (should be a local git repository with the above configured as its remote)
     file_root: '/var/stattholder-files'

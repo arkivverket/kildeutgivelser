@@ -30,7 +30,6 @@ services:
     depends_on:
       - pgsql_server
     volumes:
-      - ./topelius_files:/var/topelius-files/
       - ./stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
       # - ./
