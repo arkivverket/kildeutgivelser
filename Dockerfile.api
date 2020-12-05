@@ -1,0 +1,45 @@
+FROM python:3.6-slim-stretch
+
+WORKDIR /app
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+# build-essential is needed to build some libraries (mainly uwsgi and the various database support ones)
+# libmariadbclient-dev is needed to build mysqlclient for mysql/mariadb support
+RUN \
+	apt-get update \
+	&& apt-get install --no-install-recommends --no-install-suggests -y \
+		gettext \
+		build-essential \
+		libmariadbclient-dev \
+		libpq-dev \
+		git \
+	&& useradd -ms /bin/bash uwsgi \
+	&& chown -R uwsgi /app
+
+RUN pip install uwsgi
+
+COPY --chown=uwsgi digital_edition_api/setup.py /app/setup.py
+COPY --chown=uwsgi digital_edition_api/openapi.json /app/openapi.json
+COPY --chown=uwsgi digital_edition_api/uwsgi.ini /app/uwsgi.ini
+COPY --chown=uwsgi digital_edition_api/sls_api /app/sls_api
+
+RUN pip install -e .
+
+USER uwsgi
+
+RUN \
+	mkdir -p ~/.config/git \
+	&& mkdir -p ~/.ssh \
+	&& touch ~/.config/git/credentials \
+	&& git config --global credential.helper "store --file ~/.config/git/credentials" \
+	&& git config --global user.name "TEI Tools" \
+	&& git config --global user.email "tei_tools@digital_edition_api" \
+	&& git config --global core.quotepath off \
+	&& rm /app/sls_api/configs/*_example.yml
+
+COPY --chown=uwsgi api/10-envsubst-on-templates.sh /docker-entrypoint.d/
+COPY --chown=uwsgi api/docker-entrypoint.sh /
+ENTRYPOINT ["/docker-entrypoint.sh"]
+
+EXPOSE 3031
+CMD ["uwsgi", "--ini", "/app/uwsgi.ini"]

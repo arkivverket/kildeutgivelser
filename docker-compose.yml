@@ -13,52 +13,45 @@ services:
     container_name: pgsql_server
     image: postgres:10.11-alpine
     volumes:
-      - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/00-db_dump.sql
-      - ./db/01-project.sql:/docker-entrypoint-initdb.d/01-project.sql
+      - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/01-db_dump.sql
+      - ./db/02-project.sql:/docker-entrypoint-initdb.d/02-project.sql
       - ./db/pgsql:/var/lib/postgresql/data
     networks:
       traefik:
     environment:
-      POSTGRES_USER: root
-      POSTGRES_PASSWORD: SecretPassword
-      POSTGRES_DB: digitaledition
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
     ports:
         - 15432:5432
 
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile.web
+  api:
+    image: kildeutgivelser/api
+    depends_on:
+      - pgsql_server
+    volumes:
+      - ./topelius_files:/var/topelius-files/
+      - ./stattholder_files:/var/stattholder-files/
+      # - ./api/configs:/app/sls_api/configs
+      # - ./
+      # - ./api_gitconfig:/home/uwsgi/.gitconfig
     restart: unless-stopped
-    ports:
-      - "2087:8080"
     networks:
       traefik:
-    volumes:
-      - tmp:/tmp
-      - ./web/public/config.json:/var/www/html/public/config.json
-      - ./web/public/index.html:/var/www/html/public/index.html
-      - ./web/public/assets/custom_css:/var/www/html/public/assets/custom_css
-      - ./web/public/assets/images:/var/www/html/public/assets/images
-      - ./web/public/assets/artiklar:/var/www/html/public/assets/artiklar
-      - ./web/public/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
-      - traefik.http.routers.app.entrypoints=https
-      - traefik.http.routers.app.tls=true
-      - traefik.http.routers.app.tls.certresolver=letsencrypt
-      - traefik.http.routers.app.middlewares=cors@file
+    environment:
+      - POSTGRES_USER
+      - POSTGRES_PASSWORD
+      - POSTGRES_DB
+      - SECURITY_KEY
+      - FLASK_DEBUG=1
 
   api_proxy:
-    image: nginx
+    image: kildeutgivelser/api_proxy
     restart: unless-stopped
-    volumes:
-      - ./api_proxy.conf:/etc/nginx/conf.d/default.conf:ro
     depends_on:
       - api
     ports:
-      - "8000:80"
+      - 8080:8080
     networks:
       traefik:
     labels:
@@ -69,36 +62,44 @@ services:
       - traefik.http.routers.api.tls.certresolver=letsencrypt
       - traefik.http.routers.api.middlewares=cors@file
 
-  api:
-    build:
-        context: ./digital_edition_api/
-    volumes:
-      - ./topelius_files:/var/topelius-files/
+  # app:
+  #   image: kildeutgivelser/web
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - api_proxy
+  #   ports:
+  #     - 2087:8080
+  #   networks:
+  #     traefik:
+  #   volumes:
+  #     - tmp:/tmp
+  #     - ./web/config.json:/var/www/html/public/config.json
+  #     - ./web/index.html:/var/www/html/public/index.html
+  #     - ./web/assets/custom_css:/var/www/html/public/assets/custom_css
+  #     - ./web/assets/images:/var/www/html/public/assets/images
+  #     - ./web/assets/artiklar:/var/www/html/public/assets/artiklar
+  #     - ./web/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
+  #   labels:
+  #     - traefik.enable=true
+  #     - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
+  #     - traefik.http.routers.app.entrypoints=https
+  #     - traefik.http.routers.app.tls=true
+  #     - traefik.http.routers.app.tls.certresolver=letsencrypt
+  #     - traefik.http.routers.app.middlewares=cors@file
 
-      # SSH keys for API to use may be mounted if needed
-      #- /var/www/ssh/deploy_key:/home/uwsgi/.ssh/id_rsa
-
-      # Config files need to be mounted
-      - ./api_config:/app/sls_api/configs
-      - ./api_gitconfig:/home/uwsgi/.gitconfig
-    restart: unless-stopped
-    networks:
-      traefik:
-    environment:
-      - FLASK_DEBUG=1
-
-  tei_tools:
-    build:
-      context: ./tei_tools/
-    ports:
-      - 4200:4200
-    networks:
-      traefik:
-    labels:
-      - traefik.enable=true
-      - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.tools.rule=Host(`tools.kildeutgivelser.bratteng.com`)
-      - traefik.http.routers.tools.entrypoints=https
-      - traefik.http.routers.tools.tls=true
-      - traefik.http.routers.tools.tls.certresolver=letsencrypt
-      - traefik.http.routers.tools.middlewares=cors@file,compress@docker
+  # tei_tools:
+  #   image: kildeutgivelser/tei_tools
+  #   depends_on:
+  #     - api_proxy
+  #   ports:
+  #     - 4200:4200
+  #   networks:
+  #     traefik:
+  #   labels:
+  #     - traefik.enable=true
+  #     - traefik.http.middlewares.compress.compress=true
+  #     - traefik.http.routers.tools.rule=Host(`tools.kildeutgivelser.bratteng.com`)
+  #     - traefik.http.routers.tools.entrypoints=https
+  #     - traefik.http.routers.tools.tls=true
+  #     - traefik.http.routers.tools.tls.certresolver=letsencrypt
+  #     - traefik.http.routers.tools.middlewares=cors@file,compress@docker
