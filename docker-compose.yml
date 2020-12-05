@@ -50,8 +50,8 @@ services:
     restart: unless-stopped
     depends_on:
       - api
-    ports:
-      - 8080:8080
+    # ports:
+    #   - 8080:8080
     networks:
       traefik:
     labels:
@@ -67,8 +67,8 @@ services:
     restart: unless-stopped
     depends_on:
       - api_proxy
-    ports:
-      - 2087:8080
+    # ports:
+    #   - 2087:8080
     networks:
       traefik:
     volumes:
@@ -91,8 +91,8 @@ services:
     image: kildeutgivelser/tei_tools
     depends_on:
       - api_proxy
-    ports:
-      - 4200:4200
+    # ports:
+    #   - 4200:4200
     networks:
       traefik:
     labels:
