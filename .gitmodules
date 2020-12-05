@@ -1,6 +1,3 @@
-[submodule "digital_edition_web"]
-	path = digital_edition_web
-	url = git@github.com:slsfi/digital_edition_web.git
 [submodule "digital_edition_db"]
 	path = digital_edition_db
 	url = git@github.com:slsfi/digital_edition_db.git
