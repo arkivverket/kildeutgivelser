@@ -32,7 +32,7 @@ services:
     volumes:
       - ./topelius_files:/var/topelius-files/
       - ./stattholder_files:/var/stattholder-files/
-      # - ./api/configs:/app/sls_api/configs
+      - ./api/config_templates:/config_templates
       # - ./
       # - ./api_gitconfig:/home/uwsgi/.gitconfig
     restart: unless-stopped
