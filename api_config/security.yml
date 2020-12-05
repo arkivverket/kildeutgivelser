@@ -3,4 +3,4 @@ secret_key: 'edVIOoj$D;N)axN<Bv*eFAmM;'
 
 # This is an SQLAlchemy database URL, into which all user and role information is stored.
 # http://docs.sqlalchemy.org/en/latest/core/engines.html
-user_database: 'sqlite:////users.db'
+user_database: 'postgres://root:SecretPassword@pgsql_server:5432/digitaledition'

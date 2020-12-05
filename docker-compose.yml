@@ -81,7 +81,6 @@ services:
       # Config files need to be mounted
       - ./api_config:/app/sls_api/configs
       - ./api_gitconfig:/home/uwsgi/.gitconfig
-      - ./db/users.db:/users.db
     restart: unless-stopped
     networks:
       traefik:
