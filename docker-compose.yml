@@ -62,44 +62,44 @@ services:
       - traefik.http.routers.api.tls.certresolver=letsencrypt
       - traefik.http.routers.api.middlewares=cors@file
 
-  # app:
-  #   image: kildeutgivelser/web
-  #   restart: unless-stopped
-  #   depends_on:
-  #     - api_proxy
-  #   ports:
-  #     - 2087:8080
-  #   networks:
-  #     traefik:
-  #   volumes:
-  #     - tmp:/tmp
-  #     - ./web/config.json:/var/www/html/public/config.json
-  #     - ./web/index.html:/var/www/html/public/index.html
-  #     - ./web/assets/custom_css:/var/www/html/public/assets/custom_css
-  #     - ./web/assets/images:/var/www/html/public/assets/images
-  #     - ./web/assets/artiklar:/var/www/html/public/assets/artiklar
-  #     - ./web/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
-  #   labels:
-  #     - traefik.enable=true
-  #     - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
-  #     - traefik.http.routers.app.entrypoints=https
-  #     - traefik.http.routers.app.tls=true
-  #     - traefik.http.routers.app.tls.certresolver=letsencrypt
-  #     - traefik.http.routers.app.middlewares=cors@file
+  app:
+    image: kildeutgivelser/web
+    restart: unless-stopped
+    depends_on:
+      - api_proxy
+    ports:
+      - 2087:8080
+    networks:
+      traefik:
+    volumes:
+      - tmp:/tmp
+      - ./web/config.json:/var/www/html/public/config.json
+      - ./web/index.html:/var/www/html/public/index.html
+      - ./web/assets/custom_css:/var/www/html/public/assets/custom_css
+      - ./web/assets/images:/var/www/html/public/assets/images
+      - ./web/assets/artiklar:/var/www/html/public/assets/artiklar
+      - ./web/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
+      - traefik.http.routers.app.entrypoints=https
+      - traefik.http.routers.app.tls=true
+      - traefik.http.routers.app.tls.certresolver=letsencrypt
+      - traefik.http.routers.app.middlewares=cors@file
 
-  # tei_tools:
-  #   image: kildeutgivelser/tei_tools
-  #   depends_on:
-  #     - api_proxy
-  #   ports:
-  #     - 4200:4200
-  #   networks:
-  #     traefik:
-  #   labels:
-  #     - traefik.enable=true
-  #     - traefik.http.middlewares.compress.compress=true
-  #     - traefik.http.routers.tools.rule=Host(`tools.kildeutgivelser.bratteng.com`)
-  #     - traefik.http.routers.tools.entrypoints=https
-  #     - traefik.http.routers.tools.tls=true
-  #     - traefik.http.routers.tools.tls.certresolver=letsencrypt
-  #     - traefik.http.routers.tools.middlewares=cors@file,compress@docker
+  tei_tools:
+    image: kildeutgivelser/tei_tools
+    depends_on:
+      - api_proxy
+    ports:
+      - 4200:4200
+    networks:
+      traefik:
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.compress.compress=true
+      - traefik.http.routers.tools.rule=Host(`tools.kildeutgivelser.bratteng.com`)
+      - traefik.http.routers.tools.entrypoints=https
+      - traefik.http.routers.tools.tls=true
+      - traefik.http.routers.tools.tls.certresolver=letsencrypt
+      - traefik.http.routers.tools.middlewares=cors@file,compress@docker
