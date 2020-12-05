@@ -42,6 +42,8 @@ services:
       - POSTGRES_PASSWORD
       - POSTGRES_DB
       - SECURITY_KEY
+      - GIT_USERNAME
+      - GIT_TOKEN
       - FLASK_DEBUG=1
 
   api_proxy:
