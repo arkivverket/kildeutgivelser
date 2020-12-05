@@ -4,7 +4,7 @@ export const environment = {
   server_url: "https://kildeutgivelser.bratteng.com",
   api_url: "https://api.kildeutgivelser.bratteng.com",
   api_url_path: "digitaledition",
-  project_default: "topelius",
+  project_default: "stattholder",
   project_default_id: 1,
   project_lock_id: 1,
   image_logo: "logo.png",

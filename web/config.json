@@ -2,7 +2,7 @@
     "app": {
         "siteLogoURL": "https://arkivverket.no",
         "readContent": "...",
-        "machineName": "topelius",
+        "machineName": "stattholder",
         "projectId": 1,
         "useLegacyIdsForSemanticData": false,
         "legacyIdPrefix": "",
@@ -250,7 +250,7 @@
             "collection": true
         },
         "indices": [
-            "topelius"
+            "stattholder"
         ],
         "fixedFilters": [
             {
