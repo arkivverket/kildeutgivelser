@@ -1,4 +1,4 @@
-engine: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_HOST}/${POSTGRES_DB}'
+engine: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}'
 
 # Each digital edition project has its own config section describing how its files are located and handled
 
