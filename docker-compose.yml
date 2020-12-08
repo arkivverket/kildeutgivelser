@@ -10,10 +10,8 @@ volumes:
 services:
   pgsql_server:
     container_name: pgsql_server
-    image: postgres:10.11-alpine
+    image: kildeutgivelser/pgsql
     volumes:
-      - ./digital_edition_db/db_dump.sql:/docker-entrypoint-initdb.d/01-db_dump.sql
-      - ./db/02-project.sql:/docker-entrypoint-initdb.d/02-project.sql
       - ./db/pgsql:/var/lib/postgresql/data
     networks:
       traefik:
