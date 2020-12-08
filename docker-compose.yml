@@ -21,6 +21,8 @@ services:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
       - POSTGRES_DB
+      - POSTGRES_HOST
+      - POSTGRES_PORT
       - SECURITY_KEY
       - GIT_USERNAME
       - GIT_TOKEN
