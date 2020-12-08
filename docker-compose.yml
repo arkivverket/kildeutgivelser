@@ -10,8 +10,6 @@ volumes:
 services:
   api:
     image: kildeutgivelser/api
-    depends_on:
-      - pgsql_server
     volumes:
       - ./stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
