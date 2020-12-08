@@ -21,7 +21,7 @@
         },
         "showTopMusicButton": false,
         "showHelpButton": false,
-        "showViewToggle": true,
+        "showViewToggle": false,
         "CollectionSortOrder": {
             "1": 1
         }
