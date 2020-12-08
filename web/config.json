@@ -153,11 +153,7 @@
         }
     },
     "defaults": {
-        "ReadModeView": [
-            "established",
-            "comments",
-            "facsimiles"
-        ]
+        "ReadModeView": ["established"]
     },
     "cache": {
         "viewmodes": {
