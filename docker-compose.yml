@@ -8,20 +8,6 @@ volumes:
   tmp:
 
 services:
-  pgsql_server:
-    container_name: pgsql_server
-    image: kildeutgivelser/pgsql
-    volumes:
-      - ./db/pgsql:/var/lib/postgresql/data
-    networks:
-      traefik:
-    environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
-      - POSTGRES_DB
-    ports:
-        - 15432:5432
-
   api:
     image: kildeutgivelser/api
     depends_on:
