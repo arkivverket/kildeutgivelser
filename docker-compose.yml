@@ -1,7 +1,6 @@
 version: '3'
 
 networks:
-  # 172.31.240.0/20
   traefik:
     external: true
 
@@ -32,7 +31,6 @@ services:
     volumes:
       - ./stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
-      # - ./
       # - ./api_gitconfig:/home/uwsgi/.gitconfig
     restart: unless-stopped
     networks:
