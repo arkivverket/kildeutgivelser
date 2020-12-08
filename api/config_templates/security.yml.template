@@ -3,4 +3,4 @@ secret_key: '${SECURITY_KEY}'
 
 # This is an SQLAlchemy database URL, into which all user and role information is stored.
 # http://docs.sqlalchemy.org/en/latest/core/engines.html
-user_database: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@pgsql_server:5432/${POSTGRES_DB}'
+user_database: 'postgres://${POSTGRES_USER}:${POSTGRES_PASSWORD}@${POSTGRES_HOST}:${POSTGRES_HOST}/${POSTGRES_DB}'
