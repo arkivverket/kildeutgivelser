@@ -74,10 +74,7 @@ services:
       - tmp:/tmp
       - ./web/config.json:/var/www/html/public/config.json
       - ./web/index.html:/var/www/html/public/index.html
-      - ./web/assets/custom_css:/var/www/html/public/assets/custom_css
-      - ./web/assets/images:/var/www/html/public/assets/images
-      - ./web/assets/artiklar:/var/www/html/public/assets/artiklar
-      - ./web/assets/jpeg-files:/var/www/html/public/assets/jpeg-files
+      - ./web/assets:/var/www/html/public/assets
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`kildeutgivelser.bratteng.com`)
