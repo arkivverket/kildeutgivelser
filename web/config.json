@@ -228,7 +228,7 @@
         "Music": false
     },
     "AboutMenuAccordion": true,
-    "HasCover": true,
+    "HasCover": false,
     "HasIntro": true,
     "SidemenuMobile": true,
     "OpenOccurrencesAndInfoOnNewPage": false,
