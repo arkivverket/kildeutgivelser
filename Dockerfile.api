@@ -47,7 +47,8 @@ RUN \
 	&& mkdir -p ~/.ssh \
 	&& git config --global credential.helper "store --file ~/.config/git/credentials" \
 	&& git config --global user.name "TEI Tools" \
-	&& git config --global user.email "tei_tools@digital_edition_api"
+	&& git config --global user.email "tei_tools@digital_edition_api" \
+  && git config --global core.quotepath off
 
 COPY --chown=uwsgi api/credentials.template /
 COPY --chown=uwsgi api/10-envsubst-on-templates.sh /docker-entrypoint.d/
