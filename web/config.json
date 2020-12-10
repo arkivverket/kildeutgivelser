@@ -87,7 +87,8 @@
         ]
     },
     "editionImages": {
-        "default": "assets/images/edition-default-cover.jpg"
+        "1": "assets/images/løvenskiold_cover.jpg",
+        "default": "assets/images/edition-default-cover.png"
     },
     "editionShortTexts": {
 		"no": {
