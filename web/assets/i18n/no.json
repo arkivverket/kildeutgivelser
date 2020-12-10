@@ -76,11 +76,11 @@
             "AddButtonText": "Melodi exempel"
         },
         "TitlePage": {
-            "Title": ""
+            "Title": "Forord"
         },
         "Introduction": {
-            "Title": "",
-            "AddButtonText": ""
+            "Title": "Introduksjon?",
+            "AddButtonText": "Legg til introduksjon?"
         },
         "ShowAll": "Visa alla",
         "ShowSearchResults": "Förekomster"
