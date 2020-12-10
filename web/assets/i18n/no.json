@@ -1,89 +1,89 @@
 {
-    "BrowserWarning": "Din webbläsare stöds inte",
-    "BrowserWarningInfo": "Internet Explorer stöds inte av denna sida. Använd Edge, Firefox eller nån annan webbläsare.",
+    "BrowserWarning": "Din nettleser støttes ikke",
+    "BrowserWarningInfo": "Internet Explorer støttes ikke på denne siden. Bruk Edge, Firefox eller en annen nettleser.",
     "BrowserWarningClose": "Lukk",
     "TutorialTexts": {
         "nextLabel": "Neste",
         "prevLabel": "Forrige",
         "skipLabel": "Hopp over",
         "doneLabel": "Klar",
-        "WelcomeText": "Välkommen, här följer en presentation av användargränssnittet.",
-        "MenuToggleText": "Klicka här för att dölja eller visa sidomenyn.",
-        "ReadTocItemText": "Här kan du se alla digital publikationer och volymer.",
-        "DownloadCacheText": "Med denna knapp kan du spara datan lokalt, så går det snabbare nästa gång."
+        "WelcomeText": "Velkommen, her følger en presentasjon av brukergrensesnittet",
+        "MenuToggleText": "Klikk her for å lukke eller vise sidemenyen",
+        "ReadTocItemText": "Her kan du se alle digitale publikasjoner og volumer",
+        "DownloadCacheText": "Med denne knappen kan du lagre dataene lokalt, så går det raskere neste gang"
     },
     "TopMenu": {
         "Home": "Forside",
         "Read": "Les",
         "Info": "Utgave",
-        "Music": "Musik"
+        "Music": "Musikk"
     },
     "Tabs": {
-        "Home": "Hem",
-        "Read": "Läs digitalt",
-        "Info": "Mer information"
+        "Home": "Hjem",
+        "Read": "Les digitalt",
+        "Info": "Mer informasjon"
     },
     "Read": {
-        "DigitalEditions": "Digitala utgåvor",
-        "OpenInTab": "Öppna i ny flik",
+        "DigitalEditions": "Digitale utgaver",
+        "OpenInTab": "Åpne i ny fane",
         "Popover": {
-            "All": "Välj alla",
+            "All": "Velg alle",
             "Appearance": "Utseende",
-            "Show": "Visningsalternativ",
+            "Show": "Visningsalternativer",
             "Comments": "Kommentarer",
-            "PersonInfo": "Personupplysningar",
-            "PlaceInfo": "Platsupplysningar",
-            "Changes": "Ändringar",
-            "Abbreviations": "Förkortningar",
-            "PageNumbering": "Stycke-/versnummer",
-            "PageBreakOriginal": "Sidnummer / sidbrytning i orig.",
-            "PageBreakEdition": "Sidnummer i den tryckta utgåvan"
+            "PersonInfo": "Personopplysninger",
+            "PlaceInfo": "Stedsopplysninger",
+            "Changes": "Endringer",
+            "Abbreviations": "Forkortelser",
+            "PageNumbering": "Stykke-/versjonsnummer",
+            "PageBreakOriginal": "Sidenummer / sideskift i orig.",
+            "PageBreakEdition": "Sidenummer i den trykte utgaven"
         },
-        "DownloadDigitalVersion": "Ladda ner digital version",
-        "DownloadPDF": "Ladda ner PDF",
-        "CommentsFor": "Kommentarer till",
-        "ReadFromBeginning": "Läs från början",
+        "DownloadDigitalVersion": "Last ned digital versjon",
+        "DownloadPDF": "Last ned PDF",
+        "CommentsFor": "Kommentarer til",
+        "ReadFromBeginning": "Les fra begynnelsen",
         "Established": {
-            "Title": "Lästext",
-            "AddButtonText": "Lästextvy"
+            "Title": "Lesetekst",
+            "AddButtonText": "Lesetekstvisning"
         },
         "Comments": {
             "Title": "Kommentarer",
-            "AddButtonText": "Kommentarvy"
+            "AddButtonText": "Kommentarvisning"
         },
         "Manuscripts": {
-            "Title": "Manuskript",
+            "Title": "Manuskripter",
             "AddButtonText": "Manuskriptvy",
-            "SelectManuscript": "Välj manuskript",
-            "ShowNormalized": "Visa ändringar inarbetade",
-            "ShowChanges": "Visa ändringar",
-            "OpenFacsimile": "Öppna faksimil"
+            "SelectManuscript": "Velg manuskript",
+            "ShowNormalized": "Vis normaliserte endringer",
+            "ShowChanges": "Vis endringer",
+            "OpenFacsimile": "Åpne faksimile"
         },
         "Variations": {
-            "Title": "Variationer",
-            "AddButtonText": "Variationsvy"
+            "Title": "Variasjoner",
+            "AddButtonText": "Variasjonsvisning"
         },
         "Facsimiles": {
-            "Title": "Faksimil",
+            "Title": "Faksimile",
             "AddButtonText": "Faksimilvy",
-            "SelectFacsimiles": "Välj faksimil",
-            "Page": "Sida",
+            "SelectFacsimiles": "Velg faksimile",
+            "Page": "Side",
             "Of": "av",
-            "OpenManuscript": "Öppna manuskript"
+            "OpenManuscript": "Åpne manuskript"
         },
         "SongExample": {
-            "Title": "Melodi exempel",
-            "AddButtonText": "Melodi exempel"
+            "Title": "Sangeksempel",
+            "AddButtonText": "Sangeksempel"
         },
         "TitlePage": {
-            "Title": "Forord"
+            "Title": ""
         },
         "Introduction": {
-            "Title": "Introduksjon",
-            "AddButtonText": "Legg til introduksjon?"
+            "Title": "",
+            "AddButtonText": ""
         },
-        "ShowAll": "Visa alla",
-        "ShowSearchResults": "Förekomster"
+        "ShowAll": "Vis alle",
+        "ShowSearchResults": "Forekomster"
     },
     "About": {
         "Title": "Arkivverket kildeutgivelser",
@@ -95,131 +95,131 @@
         "Home": "Til forsiden",
         "About": "Arkivverket kildeutgivelser",
         "Read": "Les",
-        "Facsimiles": "Faksimil i urval",
-        "ImageGallery": "Bildgalleri",
-        "PersonSearch": "Personsök",
-        "PlaceSearch": "Platsregister",
-        "TagSearch": "Ämnesord",
+        "Facsimiles": "Faksimile i utvalg",
+        "ImageGallery": "Bildegalleri",
+        "PersonSearch": "Personsøk",
+        "PlaceSearch": "Stedsregister",
+        "TagSearch": "Emneord",
         "WorkSearch": "Verkregister",
-        "MusicianSearch": "Spelmän",
-        "WriterSearch": "Upptecknare",
+        "MusicianSearch": "Spillemenn",
+        "WriterSearch": "Låtskrivere",
         "SongTypes": "Låttyper",
-        "Music": "Musik",
+        "Music": "Musikk",
         "Collections": "Kategorier",
-        "PlaymanTradition": "Finlandssvensk spelmanstradition"
+        "PlaymanTradition": "Finlandssvensk spillemannstradisjon"
     },
     "GalleryPages": {
-        "0": "Finland framställdt i teckningar",
-        "1": "En resa i Finland",
-        "2": "Topelius liv och verk"
+        "0": "Finland fremstilt i tegninger",
+        "1": "En reise i Finland",
+        "2": "Topelius liv og verk"
     },
     "MobilePages": {
-        "header": "Sidor"
+        "header": "Sider"
     },
     "BackButton": {
-        "default": "Tillbaka"
+        "default": "Tilbake"
     },
     "HomePage": {
-        "current": "Aktuellt",
-        "publishedEditions": "Publicerade utgåvor:",
-        "digitalEditionHeading": "Zacharias Topelius verk i digital utgåva",
-        "selectEdition": "Se denna"
+        "current": "Aktuelt",
+        "publishedEditions": "Publiserte utgaver:",
+        "digitalEditionHeading": "Zacharias Topelius verk i digital utgave",
+        "selectEdition": "Se denne"
     },
     "SearchApp": {
-        "simpleSearch": "Sök",
-        "advancedSearch": "Avancerad sökning",
+        "simpleSearch": "Søk",
+        "advancedSearch": "Avansert søk",
         "filter": "Filter",
-        "matchesOn": "Sökträff(ar):",
-        "numberOf": "träffar",
+        "matchesOn": "Søketreff:",
+        "numberOf": "treff,
         "pagenumber": "s.",
-        "search-holder": "Söktext",
-        "hitCount": "Antal träffar",
-        "type": "Typ",
-        "timeline": "Tidsperiod",
-        "freetext": "Fritext",
+        "search-holder": "Søketekst",
+        "hitCount": "Antall treff",
+        "type": "Type",
+        "timeline": "Tidsperiode",
+        "freetext": "Fritekst",
         "start": "Start",
-        "end": "Slut",
+        "end": "Slutt",
         "relevance": "Relevans",
-        "alphabetical": "Alfabetet",
-        "oldest": "Äldst",
-        "genre": "Genre",
+        "alphabetical": "Alfabetisk",
+        "oldest": "Eldst",
+        "genre": "Sjanger",
         "person-register": "Personregister",
-        "place-register": "Platsregister ",
-        "tag-register": "Ämnesord",
+        "place-register": "Stedssregister ",
+        "tag-register": "Emneord",
         "verk": "Verkregister",
-        "sort-by": "Sortera enligt"
+        "sort-by": "Sorter etter"
     },
     "Occurrences": {
-        "Title": "Förekomster",
+        "Title": "Forekomster",
         "Manuscript": "Manuskript",
         "Variation": "Variant",
         "Commentary": "Kommentar",
-        "Facsimile": "Faksimil",
-        "Established": "Lästext",
-        "Song": "Melodi",
-        "Info": "Information",
-        "NoInfoFound": "Ingen information hittades.",
-        "OccurrencesSmall": "förekomster",
-        "Found": "Hittade",
+        "Facsimile": "Faksimile",
+        "Established": "Lesetekst",
+        "Song": "Låt",
+        "Info": "Informasjon",
+        "NoInfoFound": "Ingen informasjon funnet.",
+        "OccurrencesSmall": "forekomster",
+        "Found": "Funnet",
         "Result": "Resultat",
-        "longitude": "long.",
-        "latitude": "lat.",
-        "city": "Stad",
+        "longitude": "lengdegrad.",
+        "latitude": "breddegrad.",
+        "city": "By",
         "region": "Region",
-        "country": "Plats",
-        "place_of_birth": "Ort",
-        "type": "Typ",
-        "source": "Källa",
-        "description": "Beskrivning",
-        "no_occurrences": "Inga förekomster",
-        "download": "ladda ner pdf",
-        "articles": "Artiklar"
+        "country": "Land",
+        "place_of_birth": "Fødested",
+        "type": "Type",
+        "source": "Kilde",
+        "description": "Beskrivelse",
+        "no_occurrences": "Ingen forekomster",
+        "download": "last ned pdf",
+        "articles": "Artikler"
     },
-    "est": "Lästext",
+    "est": "Lesetekst",
     "ms": "Manuskript",
     "com": "Kommentar",
-    "tit": "Titel",
+    "tit": "Tittel",
     "var": "Variant",
-    "inl": "Inledning",
-    "locations": "Platser",
-    "location": "Plats",
-    "tags": "Ämnesord",
-    "tag": "Ämnesord",
+    "inl": "Innledning",
+    "locations": "Steder",
+    "location": "Sted",
+    "tags": "Emneord",
+    "tag": "Emneord",
     "subjects": "Personer",
     "subject": "Person",
-    "collections": "Samlingar",
+    "collections": "Samlinger",
     "works": "Verk",
-    "recorder": "Upptecknare",
-    "playman": "Spelman",
-    "song": "Melodi",
+    "recorder": "Nedskriver",
+    "playman": "Spillemann",
+    "song": "Sang",
     "Text": "PDF",
     "Reference": {
-        "title": "Hänvisa",
-        "thisPage": "Hänvisa till denna sida",
-        "established": "Hänvisa till denna lästext",
-        "intro": "Hänvisa till denna inledning"
+        "title": "Henvis",
+        "thisPage": "Henvis til denne siden",
+        "established": "Henvis til denne leseteksten",
+        "intro": "Henvis til denne innledningen"
     },
     "Song": {
-        "Playman": "Spelman",
-        "playman": "Spelman",
-        "SongType": "Låttyp",
-        "SongName": "Låtens namn",
+        "Playman": "Spillemann",
+        "playman": "Spillemann",
+        "SongType": "Låttype",
+        "SongName": "Låtnavn",
         "Landscape": "Landskap",
-        "Place": "Ort",
-        "Recorder": "Upptecknare",
-        "recorder": "Upptecknare",
-        "Year": "Uppteckningsår",
-        "OCL": "Originalsamlingens placering",
-        "OCS": "Originalsamlingens signum",
-        "Volume": "Volym",
-        "SongNumber": "Melodinummer",
+        "Place": "Sted",
+        "Recorder": "Nedskriver",
+        "recorder": "nedskriver",
+        "Year": "Nedskrevet i",
+        "OCL": "Originalsamlingens plassering",
+        "OCS": "Originalsamlingens merke",
+        "Volume": "Volum",
+        "SongNumber": "Låtnummer",
         "Comments": "Kommentarer",
-        "SongText": "Meloditext",
-        "Download": "Ladda ner"
+        "SongText": "Sangtekst,
+        "Download": "Last ned"
     },
     "MusicPage": {
-        "Title": "Musik",
+        "Title": "Musikk",
         "SubTitle": "",
-        "PageTitle": "Musikvolymerna"
+        "PageTitle": "Musikvolumene"
     }
 }
