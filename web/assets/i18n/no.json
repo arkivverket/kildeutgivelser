@@ -53,7 +53,7 @@
         },
         "Manuscripts": {
             "Title": "Manuskripter",
-            "AddButtonText": "Manuskriptvy",
+            "AddButtonText": "Manuskriptvisning",
             "SelectManuscript": "Velg manuskript",
             "ShowNormalized": "Vis normaliserte endringer",
             "ShowChanges": "Vis endringer",
@@ -65,7 +65,7 @@
         },
         "Facsimiles": {
             "Title": "Faksimile",
-            "AddButtonText": "Faksimilvy",
+            "AddButtonText": "Faksimilvisning",
             "SelectFacsimiles": "Velg faksimile",
             "Page": "Side",
             "Of": "av",
@@ -130,7 +130,7 @@
         "advancedSearch": "Avansert søk",
         "filter": "Filter",
         "matchesOn": "Søketreff:",
-        "numberOf": "treff,
+        "numberOf": "treff",
         "pagenumber": "s.",
         "search-holder": "Søketekst",
         "hitCount": "Antall treff",
