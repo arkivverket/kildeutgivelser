@@ -11,7 +11,7 @@ services:
   api:
     image: kildeutgivelser/api
     volumes:
-      - /mnt/stattholder_files:/var/stattholder-files/
+      - ./stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
       # - ./api_gitconfig:/home/uwsgi/.gitconfig
     restart: unless-stopped

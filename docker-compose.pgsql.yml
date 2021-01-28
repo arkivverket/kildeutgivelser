@@ -9,7 +9,7 @@ services:
     container_name: pgsql_server
     image: kildeutgivelser/pgsql
     volumes:
-      - /mnt/pgsql_data:/var/lib/postgresql/data
+      - ./pgsql_data:/var/lib/postgresql/data
     networks:
       traefik:
     environment:
