@@ -6,7 +6,7 @@ stattholder:
     show_internally_published: False
     show_unpublished: False
     disabled_publications: []
-    git_repository: 'https://github.com/omBratteng/digital_edition_required_files_template.git'
+    git_repository: 'https://github.com/arkivverket/kildeutgivelser_files.git'
     git_branch: 'master'
     # And then the actual local directory where the files are located (should be a local git repository with the above configured as its remote)
     file_root: '/var/stattholder-files'
