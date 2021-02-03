@@ -7,7 +7,7 @@ export const environment = {
   production: false,
   version: "0.9.0",
   server_url: "https://kildeutgivelser.bratteng.com",
-  api_url: "https://api.kildeutgivelser.bratteng.com",
+  api_url: "https://kildeutgivelser.bratteng.com/backend/",
   api_url_path: "digitaledition",
   project_default: "stattholder",
   project_default_id: 1,

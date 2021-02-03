@@ -22,6 +22,8 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN \
 	apt-get update \
 	&& apt-get install --no-install-recommends --no-install-suggests -y \
+		libpcre3 \
+		libpcre3-dev \
 		ca-certificates \
 		gettext \
 		build-essential \
@@ -31,11 +33,10 @@ RUN \
 	&& useradd -ms /bin/bash uwsgi \
 	&& chown -R uwsgi /app
 
-RUN pip install uwsgi
+RUN pip install uwsgi -I --no-cache-dir
 
 COPY --from=prepare --chown=uwsgi src/setup.py /app/setup.py
 COPY --from=prepare --chown=uwsgi src/openapi.json /app/openapi.json
-COPY --from=prepare --chown=uwsgi src/uwsgi.ini /app/uwsgi.ini
 COPY --from=prepare --chown=uwsgi src/sls_api /app/sls_api
 
 RUN pip install -e .
@@ -54,6 +55,7 @@ COPY --chown=uwsgi api/credentials.template /
 COPY --chown=uwsgi api/10-envsubst-on-templates.sh /docker-entrypoint.d/
 COPY --chown=uwsgi api/11-envsubst-git-credentials.sh /docker-entrypoint.d/
 COPY --chown=uwsgi api/docker-entrypoint.sh /
+COPY --chown=uwsgi api/uwsgi.ini /app/uwsgi.ini
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
 EXPOSE 3031

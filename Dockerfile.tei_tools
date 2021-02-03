@@ -21,4 +21,4 @@ COPY tei_tools/environment.prod.ts /app/src/environments/environment.prod.ts
 
 
 EXPOSE 4200
-CMD [ "npx", "ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--disableHostCheck=true" ]
+CMD [ "npx", "ng", "serve", "--host", "0.0.0.0", "--port", "4200", "--disableHostCheck=true", "--base-href", "/tools/" ]

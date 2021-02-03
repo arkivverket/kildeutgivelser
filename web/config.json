@@ -6,7 +6,7 @@
         "projectId": 1,
         "useLegacyIdsForSemanticData": false,
         "legacyIdPrefix": "",
-        "apiEndpoint": "https://api.kildeutgivelser.bratteng.com/digitaledition",
+        "apiEndpoint": "https://kildeutgivelser.bratteng.com/backend/digitaledition",
         "page-title": {
 			"no": "page-title"
         },
