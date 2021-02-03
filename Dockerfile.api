@@ -33,7 +33,7 @@ RUN \
 	&& useradd -ms /bin/bash uwsgi \
 	&& chown -R uwsgi /app
 
-RUN pip install uwsgi -I --no-cache-dir
+RUN pip install uwsgi
 
 COPY --from=prepare --chown=uwsgi src/setup.py /app/setup.py
 COPY --from=prepare --chown=uwsgi src/openapi.json /app/openapi.json
