@@ -30,7 +30,7 @@ RUN \
 		libmariadbclient-dev \
 		libpq-dev \
 		git \
-	&& useradd -ms /bin/bash uwsgi \
+	&& useradd -u 10000 -ms /bin/bash uwsgi \
 	&& chown -R uwsgi /app
 
 RUN pip install uwsgi
