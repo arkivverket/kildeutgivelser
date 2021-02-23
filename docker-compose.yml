@@ -13,7 +13,6 @@ services:
     volumes:
       - /srv/stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
-      # - ./api_gitconfig:/home/uwsgi/.gitconfig
     restart: unless-stopped
     networks:
       traefik:
@@ -26,15 +25,13 @@ services:
       - SECURITY_KEY
       - GIT_USERNAME
       - GIT_TOKEN
-      - FLASK_DEBUG=1
+      - FLASK_DEBUG=0
 
   app:
     image: kildeutgivelser/web
     restart: unless-stopped
     depends_on:
       - api
-    # ports:
-    #   - 2087:8080
     networks:
       traefik:
     volumes:
@@ -43,16 +40,12 @@ services:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`beta.kildeutgivelser.arkivverket.no`)
       - traefik.http.routers.app.entrypoints=http
-      # - traefik.http.routers.app.tls=true
-      # - traefik.http.routers.app.tls.certresolver=letsencrypt
       - traefik.http.routers.app.middlewares=cors@file
 
   tei_tools:
     image: kildeutgivelser/tei_tools
     depends_on:
       - api
-    # ports:
-    #   - 4200:4200
     networks:
       traefik:
     labels:
@@ -60,6 +53,4 @@ services:
       - traefik.http.middlewares.compress.compress=true
       - traefik.http.routers.tools.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/tools`)
       - traefik.http.routers.tools.entrypoints=http
-      # - traefik.http.routers.tools.tls=true
-      # - traefik.http.routers.tools.tls.certresolver=letsencrypt
       - traefik.http.routers.tools.middlewares=cors@file,compress@docker
