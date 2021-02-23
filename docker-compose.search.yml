@@ -30,7 +30,7 @@ services:
       - ./search/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./search/pipeline:/usr/share/logstash/pipeline:ro
       - ./search/drivers:/app/drivers
-      - /srv/stattholder_files:/var/data/xml/stattholder_xml
+      - /srv/stattholder_files/xml:/var/data/xml/stattholder_xml
     ports:
       - 5000:5000
       - 9600:9600
