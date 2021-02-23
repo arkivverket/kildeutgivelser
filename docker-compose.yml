@@ -44,6 +44,7 @@ services:
 
   tei_tools:
     image: kildeutgivelser/tei_tools
+    restart: unless-stopped
     depends_on:
       - api
     networks:
