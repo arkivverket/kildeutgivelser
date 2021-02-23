@@ -3,6 +3,7 @@ digital_edition_api
 digital_edition_web
 digital_edition_tools
 digital_edition_commentary
+digital_edition_search
 topelius_files
 stattholder_files
 db/users.db
