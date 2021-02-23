@@ -225,18 +225,20 @@
         "PageTitle": "Musikvolumene"
     },
 	"ElasticSearch": {
-		"NoHits": "Ingen treff",
 		"Found": "Funnet",
-		"SearchField": "Legg til søkefelt",
 		"From": "Fra",
-		"To": "Til",
-		"Search": "Søk",
-		"Years": "År",
-		"ShowMore": "Vis mer",
-		"ShowLess": "Vis mindre",
-		"SortBy": "Sorter etter",
-		"Relevance": "Relevans",
+		"NewestFirst": "Nyeste først",
+		"NoHits": "Ingen treff",
+		"NoWordHits": "Ingen treff",
 		"OldestFirst": "Eldste først",
-		"NewestFirst": "Nyeste først"
+		"Relevance": "Relevans",
+		"Search": "Søk",
+		"SearchField": "Legg til søkefelt",
+		"ShowLess": "Vis mindre",
+		"ShowMore": "Vis mer",
+		"SortBy": "Sorter etter",
+		"To": "Til",
+		"WordCount": "Antall treff (estimat)",
+		"Years": "År"
 	}
 }
