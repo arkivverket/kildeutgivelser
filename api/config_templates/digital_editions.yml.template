@@ -18,5 +18,5 @@ cache_lifetime_seconds: 7200  # 2 hours
 
 # Elasticsearch configuration parameters
 elasticsearch_connection:
-    host: 'dockerhost-ext03'
+    host: 'elasticsearch'
     port: 9200
