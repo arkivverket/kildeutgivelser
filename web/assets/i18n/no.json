@@ -16,7 +16,9 @@
         "Home": "Forside",
         "Read": "Les",
         "Info": "Utgave",
-        "Music": "Musikk"
+        "Music": "Musikk",
+		"SimpleSearch": "Søk",
+      	"AdvancedSearch": "Søk"
     },
     "Tabs": {
         "Home": "Hjem",
