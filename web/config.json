@@ -250,6 +250,13 @@
             "stattholder"
         ],
         "fixedFilters": [
+            {
+                "terms": {
+                    "publication_data.published": [
+                        2
+                    ]
+                }
+            }
         ],
         "types": [
             "est",
