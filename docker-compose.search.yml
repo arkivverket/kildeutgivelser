@@ -8,7 +8,7 @@ networks:
 
 services:
   elasticsearch:
-    image: docker.elastic.co/elasticsearch/elasticsearch-oss:6.8.14
+    image: docker.elastic.co/elasticsearch/elasticsearch-oss:7.6.1
     container_name: elasticsearch
     restart: unless-stopped
     volumes:
@@ -23,7 +23,7 @@ services:
       - traefik
 
   logstash:
-    image: docker.elastic.co/logstash/logstash-oss:6.8.14
+    image: docker.elastic.co/logstash/logstash-oss:7.6.1
     container_name: logstash
     restart: unless-stopped
     volumes:
@@ -45,5 +45,19 @@ services:
       LS_OPTS: "--auto-reload"
     depends_on:
       - elasticsearch
+    networks:
+      - traefik
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana-oss:7.6.1
+    container_name: kibana
+    volumes:
+      - ./search/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro
+    ports:
+      - 5601:5601
+    depends_on:
+      - elasticsearch
+    environment:
+      - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     networks:
       - traefik
