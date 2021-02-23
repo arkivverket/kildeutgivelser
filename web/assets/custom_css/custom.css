@@ -163,7 +163,3 @@ home-page .content >.fixed-content{
 title-logo > div > a {
     float: right !important;
 }
-
-#searchIcon {
-	display: none;
-}
