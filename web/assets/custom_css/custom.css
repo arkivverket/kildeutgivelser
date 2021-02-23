@@ -164,6 +164,6 @@ title-logo > div > a {
     float: right !important;
 }
 
-#searchIcon, .front-page-simple-search {
+#searchIcon {
 	display: none;
 }
