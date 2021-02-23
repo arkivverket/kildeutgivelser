@@ -221,5 +221,20 @@
         "Title": "Musikk",
         "SubTitle": "",
         "PageTitle": "Musikvolumene"
-    }
+    },
+	"ElasticSearch": {
+		"NoHits": "Ingen treff",
+		"Found": "Funnet",
+		"SearchField": "Legg til søkefelt",
+		"From": "Fra",
+		"To": "Til",
+		"Search": "Søk",
+		"Years": "År",
+		"ShowMore": "Vis mer",
+		"ShowLess": "Vis mindre",
+		"SortBy": "Sorter etter",
+		"Relevance": "Relevans",
+		"OldestFirst": "Eldste først",
+		"NewestFirst": "Nyeste først"
+	}
 }
