@@ -1,0 +1,14 @@
+---
+## Default Logstash configuration from logstash-docker.
+## from https://github.com/elastic/logstash-docker/blob/master/build/logstash/config/logstash-oss.yml
+#
+http.host: "0.0.0.0"
+path.config: "/usr/share/logstash/pipeline"
+config.reload.automatic: true
+config.reload.interval: 3s
+path.logs: "/var/log/logstash"
+pipeline.workers: 4
+#dead_letter_queue.enable: true
+#config.debug: true
+#log.level: "debug"
+pipeline.java_execution: true
