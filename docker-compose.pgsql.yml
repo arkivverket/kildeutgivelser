@@ -7,6 +7,7 @@ networks:
 services:
   pgsql_server:
     container_name: pgsql_server
+    restart: unless-stopped
     image: kildeutgivelser/pgsql
     volumes:
       - /srv/pgsql_data:/var/lib/postgresql/data
