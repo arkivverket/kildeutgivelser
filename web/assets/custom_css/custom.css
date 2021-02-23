@@ -143,16 +143,16 @@ home-page .content >.fixed-content{
     opacity: 0.03;
 }
 
-.toolbar-background{
-    background-color: #000000 !important;
+.toolbar-background-md {
+    background-color: #000000;
 }
 
 .mobile_row {
-    background-color: #000000 !important;
+    background-color: #000000;
 }
 
 .mobile_row > button{
-    background-color: #000000 !important;
+    background-color: #000000;
     box-shadow: none !important;
 }
 
