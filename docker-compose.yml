@@ -25,7 +25,7 @@ services:
       - SECURITY_KEY
       - GIT_USERNAME
       - GIT_TOKEN
-      - FLASK_DEBUG=0
+      - FLASK_DEBUG=1
 
   app:
     image: kildeutgivelser/web
