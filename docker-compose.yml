@@ -10,6 +10,7 @@ volumes:
 services:
   api:
     image: kildeutgivelser/api
+    container_name: kildeutgivelser_api
     volumes:
       - /srv/stattholder_files:/var/stattholder-files/
       - ./api/config_templates:/config_templates
@@ -29,6 +30,7 @@ services:
 
   app:
     image: kildeutgivelser/web
+    container_name: kildeutgivelser_http
     restart: unless-stopped
     depends_on:
       - api
@@ -44,6 +46,7 @@ services:
 
   tei_tools:
     image: kildeutgivelser/tei_tools
+    container_name: kildeutgivelser_tools
     restart: unless-stopped
     depends_on:
       - api
