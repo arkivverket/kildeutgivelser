@@ -65,7 +65,11 @@
         "getFacsimilePagesInfinite": true,
         "facsimileDefaultZoomLevel": 3,
         "galleryCollectionMapping": {},
-        "showReadTextIllustrations": [1,2,545],
+        "showReadTextIllustrations": [
+			"1",
+			"2",
+			"545"
+		],
         "sortableLetters": []
     },
     "i18n": {
