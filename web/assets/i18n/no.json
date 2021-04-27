@@ -33,6 +33,7 @@
             "Appearance": "Utseende",
             "Show": "Visningsalternativer",
             "Comments": "Kommentarer",
+			"Options": "Alternativer",
             "PersonInfo": "Personopplysninger",
             "PlaceInfo": "Stedsopplysninger",
             "Changes": "Endringer",
@@ -199,7 +200,10 @@
         "title": "Henvis",
         "thisPage": "Henvis til denne siden",
         "established": "Henvis til denne leseteksten",
-        "intro": "Henvis til denne innledningen"
+        "intro": "Henvis til denne innledningen",
+		"share": "Del",
+		"mail": "E-post",
+		"refer": "Henvisninger"
     },
     "Song": {
         "Playman": "Spillemann",
