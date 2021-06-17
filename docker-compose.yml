@@ -74,6 +74,6 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.tools.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/svn`)
-      - traefik.http.routers.tools.entrypoints=http
-      - traefik.http.routers.tools.middlewares=cors@file
+      - traefik.http.routers.svn.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/svn`)
+      - traefik.http.routers.svn.entrypoints=http
+      - traefik.http.routers.svn.middlewares=cors@file
