@@ -70,9 +70,10 @@ services:
       - /srv/svn:/opt/svn/
     networks:
       svn:
-    # labels:
-    #   - traefik.enable=true
-    #   - traefik.http.middlewares.compress.compress=true
-    #   - traefik.http.routers.tools.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/tools`)
-    #   - traefik.http.routers.tools.entrypoints=http
-    #   - traefik.http.routers.tools.middlewares=cors@file,compress@docker
+      traefik:
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.compress.compress=true
+      - traefik.http.routers.tools.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/svn`)
+      - traefik.http.routers.tools.entrypoints=http
+      - traefik.http.routers.tools.middlewares=cors@file
