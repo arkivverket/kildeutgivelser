@@ -1,0 +1,10 @@
+FROM httpd:2.4.48
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+RUN apt-get update \
+	&& apt-get -y install subversion apache2 libapache2-mod-svn
+
+COPY svn/edithusers /etc/apache2/edithusers
+COPY svn/dav_svn.conf /etc/apache2/sites-enabled/
+
+CMD [ "apache2ctl", "-DFOREGROUND" ]
