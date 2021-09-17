@@ -4,6 +4,11 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 RUN apt-get update \
 	&& apt-get -y install subversion apache2 libapache2-mod-svn
 
+# Create non-root user
+RUN set -xe \
+	&& addgroup --gid 1500 nonroot \
+	&& adduser --uid 1500 --gid 1500 --disabled-password --gecos '' nonroot
+
 COPY svn/edithusers /etc/apache2/edithusers
 COPY svn/dav_svn.conf /etc/apache2/sites-enabled/
 

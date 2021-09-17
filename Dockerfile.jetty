@@ -1,0 +1,33 @@
+# Add norwegian translation to war file
+FROM openjdk:8 AS war-builder
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
+WORKDIR /app
+
+COPY ./edith/edith.war /app/edith.war
+COPY ./edith/WEB-INF /app/WEB-INF
+
+RUN jar -uvf edith.war WEB-INF/classes/app.properties
+
+# Run the jetty server
+FROM openjdk:8
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+WORKDIR /var/lib/jetty
+ENV JETTY_HOME /var/lib/jetty
+
+ADD ./edith/edith_init_repo.tar.gz /opt/svn/
+ADD ./edith/jetty-distribution-9.4.9.v20180320.tar.gz /
+COPY --from=war-builder /app/edith.war /var/lib/jetty/webapps/edith.war
+
+# Create non-root user
+RUN set -xe \
+	&& addgroup --gid 1500 nonroot \
+	&& adduser --uid 1500 --gid 1500 --disabled-password --gecos '' nonroot
+
+RUN set -xe \
+	&& chown -R nonroot:nonroot /opt/svn \
+	&& svn mkdir -m "creating dirs" file:///opt/svn/edith/documents/ \
+	&& svn mkdir -m "creating dirs" file:///opt/svn/edith/documents/trunk/
+
+EXPOSE 8080
+CMD [ "java", "-jar", "/var/lib/jetty/start.jar", "-DFOREGROUND" ]
