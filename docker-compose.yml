@@ -24,6 +24,7 @@ services:
       - POSTGRES_DB
       - POSTGRES_HOST
       - POSTGRES_PORT
+      - MYSQL_ROOT_PASSWORD
       - SECURITY_KEY
       - GIT_USERNAME
       - GIT_TOKEN
