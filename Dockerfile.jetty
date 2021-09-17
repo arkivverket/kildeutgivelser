@@ -19,13 +19,7 @@ ADD ./edith/edith_init_repo.tar.gz /opt/svn/
 ADD ./edith/jetty-distribution-9.4.9.v20180320.tar.gz /
 COPY --from=war-builder /app/edith.war /var/lib/jetty/webapps/edith.war
 
-# Create non-root user
 RUN set -xe \
-	&& addgroup --gid 1500 nonroot \
-	&& adduser --uid 1500 --gid 1500 --disabled-password --gecos '' nonroot
-
-RUN set -xe \
-	&& chown -R nonroot:nonroot /opt/svn \
 	&& svn mkdir -m "creating dirs" file:///opt/svn/edith/documents/ \
 	&& svn mkdir -m "creating dirs" file:///opt/svn/edith/documents/trunk/
 
