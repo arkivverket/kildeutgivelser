@@ -1,12 +1,9 @@
 version: '3'
 
 networks:
-  svn:
+  mysql:
   traefik:
     external: true
-
-volumes:
-  tmp:
 
 services:
   jetty:
@@ -17,8 +14,10 @@ services:
       - mysql
     volumes:
       - /srv/svn:/opt/svn/
+    ports:
+      - "8083:8080"
     networks:
-      svn:
+      mysql:
       traefik:
     labels:
       - traefik.enable=true
@@ -35,8 +34,9 @@ services:
       - jetty
     volumes:
       - /srv/svn:/opt/svn/
+    ports:
+      - 8282:80
     networks:
-      svn:
       traefik:
     labels:
       - traefik.enable=true
@@ -49,5 +49,13 @@ services:
     image: kildeutgivelser/mysql
     container_name: kildeutgivelser_mysql
     restart: unless-stopped
+    networks:
+      mysql:
+        aliases:
+          - mysql-db
+    ports:
+      - "3307:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD
     volumes:
       - /srv/mysql_data:/var/lib/mysql
