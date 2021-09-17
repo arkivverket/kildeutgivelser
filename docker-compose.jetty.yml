@@ -20,7 +20,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.jetty.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/jetty`)
+      - traefik.http.routers.jetty.rule=Host(`beta.kildeutgivelser.arkivverket.no`) && PathPrefix(`/edith`)
       - traefik.http.routers.jetty.entrypoints=http
       # - traefik.http.routers.jetty.middlewares=cors@file
 
