@@ -1,0 +1,53 @@
+version: '3'
+
+networks:
+  svn:
+  traefik:
+    external: true
+
+volumes:
+  tmp:
+
+services:
+  jetty:
+    image: kildeutgivelser/jetty
+    container_name: kildeutgivelser_jetty
+    restart: unless-stopped
+    depends_on:
+      - mysql
+    volumes:
+      - /srv/svn:/opt/svn/
+    networks:
+      svn:
+      traefik:
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.compress.compress=true
+      - traefik.http.routers.jetty.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/jetty`)
+      - traefik.http.routers.jetty.entrypoints=http
+      # - traefik.http.routers.jetty.middlewares=cors@file
+
+  svn:
+    image: kildeutgivelser/svn
+    container_name: kildeutgivelser_svn
+    restart: unless-stopped
+    depends_on:
+      - jetty
+    volumes:
+      - /srv/svn:/opt/svn/
+    networks:
+      svn:
+      traefik:
+    labels:
+      - traefik.enable=true
+      - traefik.http.middlewares.compress.compress=true
+      - traefik.http.routers.svn.rule=Host(`beta.kildeutgivelser.arkivverket.no`)  && PathPrefix(`/svn`)
+      - traefik.http.routers.svn.entrypoints=http
+      - traefik.http.routers.svn.middlewares=cors@file
+
+  mysql:
+    image: kildeutgivelser/mysql
+    container_name: kildeutgivelser_mysql
+    restart: unless-stopped
+    volumes:
+      - /srv/mysql_data:/var/lib/mysql
