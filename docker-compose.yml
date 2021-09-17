@@ -39,6 +39,8 @@ services:
       traefik:
     volumes:
       - tmp:/tmp
+    healthcheck:
+      disable: true
     labels:
       - traefik.enable=true
       - traefik.http.routers.app.rule=Host(`beta.kildeutgivelser.arkivverket.no`)
