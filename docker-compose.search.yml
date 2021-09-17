@@ -18,7 +18,7 @@ services:
       - 9300:9300
     environment:
       # ES_JAVA_OPTS: "-Xmx4096m -Xms2048m"
-      ES_JAVA_OPTS: "-Xmx512m -Xms512m"
+      ES_JAVA_OPTS: "-Xmx2048m -Xms2048m"
     networks:
       - traefik
 
@@ -41,7 +41,7 @@ services:
       POSTGRES_DB:
       POSTGRES_HOST:
       POSTGRES_PORT:
-      LS_JAVA_OPTS: "-Xmx512m -Xms512m"
+      LS_JAVA_OPTS: "-Xmx2048m -Xms2048m"
       LS_OPTS: "--auto-reload"
     depends_on:
       - elasticsearch
