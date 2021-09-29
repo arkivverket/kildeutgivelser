@@ -31,6 +31,7 @@ svn_remote = os.getenv("SVN_REMOTE")
 
 git_remote = os.getenv("GIT_REMOTE")
 git_subfolder = os.getenv("GIT_SUBFOLDER")
+svn_sync_cache_path = os.getenv("SVN_SYNC_CACHE_PATH")
 
 
 class GitSVNSyncTool(object):
@@ -55,7 +56,7 @@ class GitSVNSyncTool(object):
             self.svn += ["--no-auth-cache"]
 
         # Set up working copies to use for syncing
-        self.git_local_root = os.path.join(os.getcwd(), "git_repo")
+        self.git_local_root = os.path.join(svn_sync_cache_path, "git_repo")
         if not os.path.exists(self.git_local_root):
             # if there's no local git repo, assume this is the first run. initialize from SVN.
             self.initialize_new_git_repo = True
@@ -66,7 +67,7 @@ class GitSVNSyncTool(object):
             self.logger.debug(
                 "Cloned remote git repo: {!r}".format("; ".join(clone)))
 
-        self.svn_local_root = os.path.join(os.getcwd(), "svn_repo")
+        self.svn_local_root = os.path.join(svn_sync_cache_path, "svn_repo")
         if not os.path.exists(self.svn_local_root):
             cmd = list(self.svn)
             cmd += ["checkout", svn_remote, self.svn_local_root]

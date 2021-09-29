@@ -39,13 +39,12 @@ RUN \
 	&& git config --global credential.helper "store --file ~/.config/git/credentials" \
 	&& git config --global user.name "arkivverketbot" \
 	&& git config --global user.email "arkivverketbot@arkivverket.no" \
-	&& git config --global core.quotepath off \
-	&& git config --global pull.ff only
+	&& git config --global core.quotepath off
 
-COPY credentials.template /
-COPY 11-envsubst-git-credentials.sh /docker-entrypoint.d/
-COPY docker-entrypoint.sh /
-COPY app/ /app/
+COPY svn_sync/credentials.template /
+COPY svn_sync/11-envsubst-git-credentials.sh /docker-entrypoint.d/
+COPY svn_sync/docker-entrypoint.sh /
+COPY svn_sync/app/ /app/
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 CMD [ "python", "-m", "app.main" ]
