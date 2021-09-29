@@ -167,3 +167,8 @@ title-logo > div > a {
 top-menu.splitPanePossible ion-toolbar ion-buttons button:nth-last-child(2) {
 	display: none;
 }
+
+ion-title .logo {
+	height: 1rem;
+	padding-right: 0.75rem;
+}
