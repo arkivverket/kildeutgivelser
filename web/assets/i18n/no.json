@@ -79,11 +79,16 @@
             "AddButtonText": "Sangeksempel"
         },
         "TitlePage": {
-            "Title": ""
+            "Title": "",
+            "AddButtonText": "Tittel"
         },
         "Introduction": {
             "Title": "",
-            "AddButtonText": ""
+            "AddButtonText": "Introduksjon"
+        },
+		"Illustrations": {
+            "Title": "",
+            "AddButtonText": "Illustrasjoner"
         },
         "ShowAll": "Vis alle",
         "ShowSearchResults": "Forekomster"
