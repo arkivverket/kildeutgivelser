@@ -13,7 +13,7 @@ end_of_ine = lf
 indent_style = space
 indent_size = 2
 
-[*.{py}]
+[*.py]
 indent_style = space
 indent_size = 4
 
