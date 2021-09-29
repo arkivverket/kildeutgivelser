@@ -47,8 +47,8 @@ RUN \
 	mkdir -p ~/.config/git \
 	&& mkdir -p ~/.ssh \
 	&& git config --global credential.helper "store --file ~/.config/git/credentials" \
-	&& git config --global user.name "TEI Tools" \
-	&& git config --global user.email "tei_tools@digital_edition_api" \
+	&& git config --global user.name "arkivverketbot" \
+	&& git config --global user.email "arkivverketbot@arkivverket.no" \
   && git config --global core.quotepath off
 
 COPY --chown=uwsgi api/credentials.template /
