@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-docker run --rm -it \
+docker run --rm \
     --env-file /srv/kildeutgivelser/.env \
     -v svn_sync_cache:/tmp/svn_sync_cache \
     kildeutgivelser/svn_sync
