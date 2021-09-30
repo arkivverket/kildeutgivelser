@@ -1,8 +1,8 @@
 export const environment = {
   production: true,
   version: "1.0.0",
-  server_url: "https://beta.kildeutgivelser.arkivverket.no",
-  api_url: "https://beta.kildeutgivelser.arkivverket.no/backend/",
+  server_url: "http://kildeutgivelser.arkivverket.local",
+  api_url: "http://kildeutgivelser.arkivverket.local/backend/",
   api_url_path: "digitaledition",
   project_default: "stattholder",
   project_default_id: 1,

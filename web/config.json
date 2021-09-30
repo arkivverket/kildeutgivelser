@@ -6,7 +6,7 @@
         "projectId": 1,
         "useLegacyIdsForSemanticData": false,
         "legacyIdPrefix": "",
-        "apiEndpoint": "https://beta.kildeutgivelser.arkivverket.no/backend/digitaledition",
+        "apiEndpoint": "http://kildeutgivelser.arkivverket.local/backend/digitaledition",
         "page-title": {
 			"no": "page-title"
         },

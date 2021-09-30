@@ -1,5 +1,5 @@
 [user]
-	email = tei_tools@beta.kildeutgivelser.arkivverket.no
-	name = TEI Tools
+	email = arkivverketbot@arkivverket.no
+	name = arkivverketbot
 [core]
 	quotepath = off
