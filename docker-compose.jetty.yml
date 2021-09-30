@@ -1,6 +1,7 @@
 version: '3'
 
 networks:
+  svn:
   traefik:
     external: true
 
@@ -36,6 +37,7 @@ services:
       - 8282:80
     networks:
       traefik:
+      svn:
     labels:
       - traefik.enable=true
       - traefik.http.middlewares.compress.compress=true
