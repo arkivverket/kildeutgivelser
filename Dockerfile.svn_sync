@@ -38,7 +38,7 @@ RUN \
 	&& mkdir -p ~/.ssh \
 	&& git config --global credential.helper "store --file ~/.config/git/credentials" \
 	&& git config --global user.name "arkivverketbot" \
-	&& git config --global user.email "arkivverketbot@arkivverket.no" \
+	&& git config --global user.email "1465152+arkivverketbot@users.noreply.github.com" \
 	&& git config --global core.quotepath off
 
 COPY svn_sync/credentials.template /
