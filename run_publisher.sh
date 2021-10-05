@@ -5,6 +5,7 @@ docker run --rm \
     -v svn_sync_cache:/tmp/svn_sync_cache \
     --env-file /srv/kildeutgivelser/.env \
     --network kildeutgivelser_svn \
+	--name cronjob_svn_sync \
     kildeutgivelser/svn_sync
 
 
@@ -14,6 +15,7 @@ docker run --rm \
     -v /srv/kildeutgivelser/api/config_templates:/config_templates \
     --env-file /srv/kildeutgivelser/.env \
 	--network kildeutgivelser \
+	--name cronjob_publish \
     kildeutgivelser/api python /app/sls_api/scripts/publisher.py stattholder --all_ids --git_author "arkivverketbot <1465152+arkivverketbot@users.noreply.github.com>"
 
 # Just tracking that it actually works and runs through fine
