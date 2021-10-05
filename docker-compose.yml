@@ -53,9 +53,3 @@ services:
       - api
     networks:
       traefik:
-    labels:
-      - traefik.enable=true
-      - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.tools.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`)) && PathPrefix(`/tools`)
-      - traefik.http.routers.tools.entrypoints=http
-      - traefik.http.routers.tools.middlewares=cors@file,compress@docker
