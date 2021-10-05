@@ -14,8 +14,6 @@ services:
       - mysql
     volumes:
       - /srv/svn:/opt/svn/
-    ports:
-      - "8083:8080"
     networks:
       traefik:
     # labels:
@@ -33,8 +31,6 @@ services:
       - jetty
     volumes:
       - /srv/svn:/opt/svn/
-    ports:
-      - 8282:80
     networks:
       traefik:
       svn:
