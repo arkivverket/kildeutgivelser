@@ -2,7 +2,7 @@ version: '3'
 
 
 networks:
-  traefik:
+  kildeutgivelser:
     external: true
 
 
@@ -20,7 +20,7 @@ services:
       # ES_JAVA_OPTS: "-Xmx4096m -Xms2048m"
       ES_JAVA_OPTS: "-Xmx2048m -Xms2048m"
     networks:
-      - traefik
+      - kildeutgivelser
 
   logstash:
     image: docker.elastic.co/logstash/logstash-oss:7.6.1
@@ -46,7 +46,7 @@ services:
     depends_on:
       - elasticsearch
     networks:
-      - traefik
+      - kildeutgivelser
 
   kibana:
     image: docker.elastic.co/kibana/kibana-oss:7.6.1
@@ -60,4 +60,4 @@ services:
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
     networks:
-      - traefik
+      - kildeutgivelser

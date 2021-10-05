@@ -1,7 +1,7 @@
 version: '3'
 
 networks:
-  traefik:
+  kildeutgivelser:
     external: true
 
 services:
@@ -12,7 +12,7 @@ services:
     volumes:
       - /srv/pgsql_data:/var/lib/postgresql/data
     networks:
-      traefik:
+      kildeutgivelser:
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD

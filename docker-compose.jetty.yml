@@ -1,8 +1,8 @@
-version: '3'
+version: '3.7'
 
 networks:
   svn:
-  traefik:
+  kildeutgivelser:
     external: true
 
 services:
@@ -15,7 +15,7 @@ services:
     volumes:
       - /srv/svn:/opt/svn/
     networks:
-      traefik:
+      kildeutgivelser:
 
   svn:
     image: kildeutgivelser/svn
@@ -26,7 +26,7 @@ services:
     volumes:
       - /srv/svn:/opt/svn/
     networks:
-      traefik:
+      kildeutgivelser:
       svn:
 
   mysql:
@@ -34,7 +34,7 @@ services:
     container_name: kildeutgivelser_mysql
     restart: unless-stopped
     networks:
-      traefik:
+      kildeutgivelser:
         aliases:
           - mysql-db
     ports:

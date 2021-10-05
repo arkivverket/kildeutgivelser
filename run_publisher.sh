@@ -13,7 +13,7 @@ docker run --rm \
     -v /srv/stattholder_files:/var/stattholder-files/ \
     -v /srv/kildeutgivelser/api/config_templates:/config_templates \
     --env-file /srv/kildeutgivelser/.env \
-	--network traefik \
+	--network kildeutgivelser \
     kildeutgivelser/api python /app/sls_api/scripts/publisher.py stattholder --all_ids --git_author "arkivverketbot <1465152+arkivverketbot@users.noreply.github.com>"
 
 # Just tracking that it actually works and runs through fine

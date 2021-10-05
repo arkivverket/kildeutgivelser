@@ -1,8 +1,8 @@
-version: '3'
+version: '3.7'
 
 networks:
-  traefik:
-    external: true
+  kildeutgivelser:
+    name: kildeutgivelser
 
 volumes:
   tmp:
@@ -16,7 +16,7 @@ services:
       - ./api/config_templates:/config_templates
     restart: unless-stopped
     networks:
-      traefik:
+      kildeutgivelser:
     environment:
       - POSTGRES_USER
       - POSTGRES_PASSWORD
@@ -36,14 +36,11 @@ services:
     depends_on:
       - api
     networks:
-      traefik:
+      kildeutgivelser:
+    ports:
+      - 80:8080
     volumes:
       - tmp:/tmp
-    labels:
-      - traefik.enable=true
-      - traefik.http.routers.app.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`))
-      - traefik.http.routers.app.entrypoints=http
-      - traefik.http.routers.app.middlewares=cors@file
 
   tei_tools:
     image: kildeutgivelser/tei_tools
@@ -52,4 +49,4 @@ services:
     depends_on:
       - api
     networks:
-      traefik:
+      kildeutgivelser:
