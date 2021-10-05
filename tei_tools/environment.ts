@@ -14,7 +14,7 @@ export const environment = {
   project_lock_id: null,
   image_logo: "logo.png",
   publisher_configuration: {
-    show_remove: false,
+    show_remove: true,
   },
   selector_configurations: [
     {
