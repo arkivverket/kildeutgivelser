@@ -3,7 +3,7 @@
 
 set -e
 
-if [ "$1" = "uwsgi" ]; then
+if [ "$1" = "uwsgi" -o "$1" = "python" ]; then
     if /usr/bin/find "/docker-entrypoint.d/" -mindepth 1 -maxdepth 1 -type f -print -quit 2>/dev/null; then
         find "/docker-entrypoint.d/" -follow -type f -print | sort -n | while read -r f; do
             case "$f" in
