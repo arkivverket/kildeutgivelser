@@ -14,7 +14,7 @@ docker run --rm \
     -v /srv/kildeutgivelser/api/config_templates:/config_templates \
     --env-file /srv/kildeutgivelser/.env \
 	--network traefik \
-    kildeutgivelser/api python /app/sls_api/scripts/publisher.py stattholder --all_ids
+    kildeutgivelser/api python /app/sls_api/scripts/publisher.py stattholder --all_ids --git_author "arkivverketbot <1465152+arkivverketbot@users.noreply.github.com>"
 
 # Just tracking that it actually works and runs through fine
 echo $(date +"%Y-%m-%dT%H:%M:%S%z") > /tmp/run_publisher.log
