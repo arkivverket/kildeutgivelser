@@ -6,6 +6,7 @@ digital_edition_commentary
 digital_edition_search
 topelius_files
 stattholder_files
+kildeutgivelser_files
 db/users.db
 !db/.gitkeep
 pgsql_data
