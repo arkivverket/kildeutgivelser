@@ -18,11 +18,11 @@ services:
       - "8083:8080"
     networks:
       traefik:
-    labels:
-      - traefik.enable=true
-      - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.jetty.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`)) && PathPrefix(`/edith`)
-      - traefik.http.routers.jetty.entrypoints=http
+    # labels:
+    #   - traefik.enable=true
+    #   - traefik.http.middlewares.compress.compress=true
+    #   - traefik.http.routers.jetty.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`)) && PathPrefix(`/edith`)
+    #   - traefik.http.routers.jetty.entrypoints=http
       # - traefik.http.routers.jetty.middlewares=cors@file
 
   svn:
@@ -38,12 +38,12 @@ services:
     networks:
       traefik:
       svn:
-    labels:
-      - traefik.enable=true
-      - traefik.http.middlewares.compress.compress=true
-      - traefik.http.routers.svn.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`))  && PathPrefix(`/svn`)
-      - traefik.http.routers.svn.entrypoints=http
-      - traefik.http.routers.svn.middlewares=cors@file
+    # labels:
+    #   - traefik.enable=true
+    #   - traefik.http.middlewares.compress.compress=true
+    #   - traefik.http.routers.svn.rule=(Host(`beta.kildeutgivelser.arkivverket.no`) || Host(`kildeutgivelser.arkivverket.local`))  && PathPrefix(`/svn`)
+    #   - traefik.http.routers.svn.entrypoints=http
+    #   - traefik.http.routers.svn.middlewares=cors@file
 
   mysql:
     image: kildeutgivelser/mysql
