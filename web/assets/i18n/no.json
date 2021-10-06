@@ -114,7 +114,9 @@
         "SongTypes": "Låttyper",
         "Music": "Musikk",
         "Collections": "Kategorier",
-        "PlaymanTradition": "Finlandssvensk spillemannstradisjon"
+        "PlaymanTradition": "Finlandssvensk spillemannstradisjon",
+		"Books": "Bøker",
+		"MediaCollections": "Medie samlinger"
     },
     "GalleryPages": {
         "0": "Finland fremstilt i tegninger",
