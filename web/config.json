@@ -143,18 +143,18 @@
     },
     "show": {
         "TOC": {
-            "Home": false,
+            "Home": true,
             "About": true,
             "Read": true,
-            "Facsimiles": false,
-            "ImageGallery": false,
+            "Facsimiles": true,
+            "ImageGallery": true,
             "PersonSearch": true,
             "PlaceSearch": true,
-            "MediaCollections": false,
-            "TagSearch": false,
-            "WorkSearch": false,
-            "SongTypes": false,
-            "Books": false
+            "MediaCollections": true,
+            "TagSearch": true,
+            "WorkSearch": true,
+            "SongTypes": true,
+            "Books": true
         }
     },
     "defaults": {
