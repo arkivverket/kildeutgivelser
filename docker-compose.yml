@@ -13,6 +13,7 @@ services:
     container_name: kildeutgivelser_api
     volumes:
       - /srv/stattholder_files:/var/stattholder-files/
+      - /srv/facsimiles:/var/stattholder-files/facsimiles/
       - ./api/config_templates:/config_templates
     restart: unless-stopped
     networks:
