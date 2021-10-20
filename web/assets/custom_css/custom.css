@@ -129,18 +129,9 @@ page-music .banner{
     }
 }
 
-page-content .content >.fixed-content{
-    background-image: url('/assets/images/background.jpg');
-    opacity: 0.03;
-}
 page-content .md_content {
     background-color: #fff;
     padding: 5px 20px 10px 20px;
-}
-
-home-page .content >.fixed-content{
-    background-image: url('/assets/images/background.jpg');
-    opacity: 0.03;
 }
 
 .toolbar-background-md {
